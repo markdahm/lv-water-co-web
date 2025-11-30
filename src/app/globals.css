@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #3366AA;
+  --primary-dark: #254d85;
+  --primary-light: #5588cc;
+  --background: #f5f7fa;
+  --foreground: #1a1a1a;
+  --card-bg: #ffffff;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --input-bg: #ffffff;
+}
+
+.dark {
+  --primary: #5588cc;
+  --primary-dark: #3366AA;
+  --primary-light: #7799dd;
+  --background: #0f1419;
+  --foreground: #e7e9ea;
+  --card-bg: #1c2128;
+  --success: #34d399;
+  --danger: #f87171;
+  --muted: #9ca3af;
+  --border: #2d3748;
+  --input-bg: #1c2128;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Utility classes for balance colors */
+.balance-positive {
+  color: var(--success);
+}
+
+.balance-negative {
+  color: var(--danger);
+}
+
+/* Card styling */
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: background 0.2s;
+}
+
+.dark .card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Button styling */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: var(--border);
+  color: var(--foreground);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+  background: var(--muted);
+}
+
+.dark .btn-secondary:hover {
+  color: white;
+}
+
+/* Input styling */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 16px; /* Prevents zoom on iOS */
+  background: var(--input-bg);
+  color: var(--foreground);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(51, 102, 170, 0.1);
+}
+
+.dark input:focus,
+.dark select:focus,
+.dark textarea:focus {
+  box-shadow: 0 0 0 3px rgba(85, 136, 204, 0.2);
+}
+
+/* Table styling */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table th {
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+/* Mobile-first responsive container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* Modal backdrop dark mode */
+.dark .modal-backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
