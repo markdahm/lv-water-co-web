@@ -5,15 +5,17 @@ import { Property, MeterReading, Payment } from '@/lib/types';
 import { formatDate } from '@/lib/data';
 import { formatCurrency } from '@/lib/billing';
 
+export type SortField = 'date' | 'property' | 'type' | 'amount';
+export type SortDirection = 'asc' | 'desc';
+
 interface ActivityTableProps {
   properties: Property[];
   readings: MeterReading[];
   payments: Payment[];
   onEdit?: (activity: ActivityItem) => void;
+  sortField?: SortField;
+  sortDirection?: SortDirection;
 }
-
-type SortField = 'date' | 'property' | 'type' | 'amount';
-type SortDirection = 'asc' | 'desc';
 
 export interface ActivityItem {
   id: string;
@@ -28,9 +30,20 @@ export interface ActivityItem {
   readingValue?: number;
 }
 
-export default function ActivityTable({ properties, readings, payments, onEdit }: ActivityTableProps) {
-  const [sortField, setSortField] = useState<SortField>('date');
-  const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
+export default function ActivityTable({
+  properties,
+  readings,
+  payments,
+  onEdit,
+  sortField: externalSortField,
+  sortDirection: externalSortDirection,
+}: ActivityTableProps) {
+  const [internalSortField, setInternalSortField] = useState<SortField>('date');
+  const [internalSortDirection, setInternalSortDirection] = useState<SortDirection>('desc');
+
+  // Use external props if provided, otherwise use internal state
+  const sortField = externalSortField ?? internalSortField;
+  const sortDirection = externalSortDirection ?? internalSortDirection;
 
   const propertyMap = useMemo(() => {
     return new Map(properties.map(p => [p.id, p.name]));
@@ -94,11 +107,14 @@ export default function ActivityTable({ properties, readings, payments, onEdit }
   }, [payments, readings, propertyMap, sortField, sortDirection]);
 
   const handleSort = (field: SortField) => {
-    if (sortField === field) {
-      setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
+    // Only allow internal sorting if not externally controlled
+    if (externalSortField !== undefined) return;
+
+    if (internalSortField === field) {
+      setInternalSortDirection(internalSortDirection === 'asc' ? 'desc' : 'asc');
     } else {
-      setSortField(field);
-      setSortDirection('desc');
+      setInternalSortField(field);
+      setInternalSortDirection('desc');
     }
   };
 

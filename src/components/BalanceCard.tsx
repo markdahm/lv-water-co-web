@@ -10,6 +10,8 @@ interface BalanceCardProps {
   settings: BillingSettings;
   onRecordPayment?: () => void;
   onLogReading?: () => void;
+  onNameClick?: () => void;
+  isSelected?: boolean;
 }
 
 export default function BalanceCard({
@@ -19,15 +21,22 @@ export default function BalanceCard({
   settings,
   onRecordPayment,
   onLogReading,
+  onNameClick,
+  isSelected,
 }: BalanceCardProps) {
   const balance = calculatePropertyBalance(property, readings, payments, settings);
   const isPositive = balance >= 0;
 
   return (
-    <div className="card">
+    <div className={`card transition-all ${isSelected ? 'ring-2 ring-[var(--primary)]' : ''}`}>
       <div className="flex justify-between items-start mb-3">
         <div>
-          <h3 className="font-semibold text-lg">{property.name}</h3>
+          <h3
+            className={`font-semibold text-lg cursor-pointer hover:text-[var(--primary)] transition-colors ${isSelected ? 'text-[var(--primary)]' : ''}`}
+            onClick={onNameClick}
+          >
+            {property.name}
+          </h3>
           <p className="text-sm text-[var(--muted)]">{property.address.split('\n')[0]}</p>
         </div>
         <div className={`text-right ${isPositive ? 'text-green-500' : 'text-red-500'}`}>

@@ -27,6 +27,10 @@ export default function Dashboard() {
   // Property filter state
   const [filterPropertyIds, setFilterPropertyIds] = useState<Set<string>>(new Set());
 
+  // Sort state for activity table
+  const [sortField, setSortField] = useState<'date' | 'property' | 'type' | 'amount'>('date');
+  const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('desc');
+
   useEffect(() => {
     loadData()
       .then(setData)
@@ -233,6 +237,8 @@ export default function Dashboard() {
             settings={data.settings}
             onRecordPayment={() => openPaymentModal(property.id)}
             onLogReading={() => openReadingModal(property.id)}
+            onNameClick={() => togglePropertyFilter(property.id)}
+            isSelected={filterPropertyIds.has(property.id)}
           />
         ))}
       </div>
@@ -240,29 +246,37 @@ export default function Dashboard() {
       {/* Activity History */}
       <div className="card">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-          <h2 className="text-lg font-semibold">Recent Activity</h2>
-          <div className="flex flex-wrap gap-2">
-            {data.properties.map((property) => (
-              <button
-                key={property.id}
-                onClick={() => togglePropertyFilter(property.id)}
-                className={`px-3 py-1 text-sm rounded-full transition-colors ${
-                  filterPropertyIds.has(property.id)
-                    ? 'bg-[var(--primary)] text-white'
-                    : 'bg-[var(--border)] text-[var(--foreground)] hover:bg-[var(--primary)]/20'
-                }`}
-              >
-                {property.name}
-              </button>
-            ))}
+          <div className="flex items-center gap-3">
+            <h2 className="text-lg font-semibold">Recent Activity</h2>
             {filterPropertyIds.size > 0 && (
               <button
                 onClick={clearFilters}
-                className="px-3 py-1 text-sm rounded-full bg-red-500/20 text-red-600 hover:bg-red-500/30 transition-colors"
+                className="px-2 py-0.5 text-xs rounded-full bg-red-500/20 text-red-600 hover:bg-red-500/30 transition-colors"
               >
-                Clear
+                Clear filter
               </button>
             )}
+          </div>
+          <div className="flex items-center gap-2">
+            <label className="text-sm text-[var(--muted)]">Sort by:</label>
+            <select
+              value={`${sortField}-${sortDirection}`}
+              onChange={(e) => {
+                const [field, dir] = e.target.value.split('-') as ['date' | 'property' | 'type' | 'amount', 'asc' | 'desc'];
+                setSortField(field);
+                setSortDirection(dir);
+              }}
+              className="text-sm py-1 px-2"
+            >
+              <option value="date-desc">Date (Newest)</option>
+              <option value="date-asc">Date (Oldest)</option>
+              <option value="property-asc">Property (A-Z)</option>
+              <option value="property-desc">Property (Z-A)</option>
+              <option value="type-asc">Type (Payments first)</option>
+              <option value="type-desc">Type (Readings first)</option>
+              <option value="amount-desc">Amount (Highest)</option>
+              <option value="amount-asc">Amount (Lowest)</option>
+            </select>
           </div>
         </div>
         <ActivityTable
@@ -270,6 +284,8 @@ export default function Dashboard() {
           readings={filteredReadings}
           payments={filteredPayments}
           onEdit={openEditModal}
+          sortField={sortField}
+          sortDirection={sortDirection}
         />
       </div>
 
