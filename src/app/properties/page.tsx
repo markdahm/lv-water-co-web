@@ -9,6 +9,8 @@ export default function PropertiesPage() {
   const [data, setData] = useState<AppData | null>(null);
   const [loading, setLoading] = useState(true);
   const [selectedPropertyId, setSelectedPropertyId] = useState<string | null>(null);
+  const [editingName, setEditingName] = useState(false);
+  const [nameDraft, setNameDraft] = useState('');
   const [editingAddress, setEditingAddress] = useState(false);
   const [addressDraft, setAddressDraft] = useState('');
 
@@ -46,6 +48,26 @@ export default function PropertiesPage() {
     if (!data || !selectedProperty) return 0;
     return calculatePropertyBalance(selectedProperty, data.readings, data.payments, data.settings);
   }, [data, selectedProperty]);
+
+  const handleSaveName = async () => {
+    if (!data || !selectedProperty || !nameDraft.trim()) return;
+
+    const updatedProperties = data.properties.map((p) =>
+      p.id === selectedProperty.id ? { ...p, name: nameDraft.trim() } : p
+    );
+
+    const newData = { ...data, properties: updatedProperties };
+    setData(newData);
+    await saveData(newData);
+    setEditingName(false);
+  };
+
+  const startEditName = () => {
+    if (selectedProperty) {
+      setNameDraft(selectedProperty.name);
+      setEditingName(true);
+    }
+  };
 
   const handleSaveAddress = async () => {
     if (!data || !selectedProperty) return;
@@ -147,11 +169,46 @@ export default function PropertiesPage() {
         {/* Property details */}
         {selectedProperty && (
           <div className="flex-1 space-y-6">
-            {/* Header with address */}
+            {/* Header with name and address */}
             <div className="card">
               <div className="flex justify-between items-start">
                 <div className="flex-1">
-                  <h2 className="text-xl font-bold mb-2">{selectedProperty.name}</h2>
+                  {editingName ? (
+                    <div className="space-y-2 mb-2">
+                      <input
+                        type="text"
+                        value={nameDraft}
+                        onChange={(e) => setNameDraft(e.target.value)}
+                        className="text-xl font-bold w-full"
+                        placeholder="Property name..."
+                        autoFocus
+                      />
+                      <div className="flex gap-2">
+                        <button onClick={handleSaveName} className="btn-primary text-sm py-1 px-3">
+                          Save
+                        </button>
+                        <button
+                          onClick={() => setEditingName(false)}
+                          className="btn-secondary text-sm py-1 px-3"
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="flex items-center gap-2 mb-2">
+                      <h2 className="text-xl font-bold">{selectedProperty.name}</h2>
+                      <button
+                        onClick={startEditName}
+                        className="p-1 text-[var(--muted)] hover:text-[var(--primary)] transition-colors"
+                        title="Edit name"
+                      >
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                        </svg>
+                      </button>
+                    </div>
+                  )}
                   {editingAddress ? (
                     <div className="space-y-2">
                       <textarea
