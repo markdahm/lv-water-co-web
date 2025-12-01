@@ -84,7 +84,8 @@ export default function AddPaymentModal({
               min="0"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
-              className="w-full pl-7"
+              className="w-full"
+              style={{ paddingLeft: '1.75rem' }}
               placeholder="0.00"
               required
               inputMode="decimal"
