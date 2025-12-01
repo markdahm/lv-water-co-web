@@ -424,34 +424,8 @@ export default function InvoicesPage() {
                 <td className="py-3"></td>
                 <td className="py-3 text-right">{formatCurrency(selectedInvoice.totalAmount)}</td>
               </tr>
-              {selectedInvoice.previousBalance !== 0 && (
-                <tr className="border-b">
-                  <td className="py-3">Previous Balance</td>
-                  <td className="py-3"></td>
-                  <td className={`py-3 text-right ${selectedInvoice.previousBalance < 0 ? 'text-green-600' : ''}`}>
-                    {selectedInvoice.previousBalance < 0 ? '(' : ''}{formatCurrency(Math.abs(selectedInvoice.previousBalance))}{selectedInvoice.previousBalance < 0 ? ') credit' : ''}
-                  </td>
-                </tr>
-              )}
             </tbody>
           </table>
-
-          {/* Account Balance Section */}
-          {(() => {
-            const accountBalance = getAccountBalance(selectedInvoice.propertyId);
-            const hasCredit = accountBalance < 0;
-            return (
-              <div className={`p-4 rounded-lg text-center ${hasCredit ? 'bg-green-500/10' : 'bg-red-500/10'}`}>
-                <p className="text-sm text-[var(--muted)] mb-1">Current Account Balance</p>
-                <p className={`text-3xl font-bold ${hasCredit ? 'text-green-500' : 'text-red-500'}`}>
-                  {formatCurrency(Math.abs(accountBalance))}
-                </p>
-                <p className={`text-sm mt-1 ${hasCredit ? 'text-green-500' : 'text-red-500'}`}>
-                  {hasCredit ? 'Credit' : 'Amount Due'}
-                </p>
-              </div>
-            );
-          })()}
         </div>
       </div>
     );
