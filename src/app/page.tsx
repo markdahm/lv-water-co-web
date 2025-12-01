@@ -9,7 +9,6 @@ import ActivityTable, { ActivityItem } from '@/components/ActivityTable';
 import AddPaymentModal from '@/components/AddPaymentModal';
 import AddReadingModal from '@/components/AddReadingModal';
 import EditActivityModal from '@/components/EditActivityModal';
-import Modal from '@/components/Modal';
 
 export default function Dashboard() {
   const [data, setData] = useState<AppData | null>(null);
@@ -20,7 +19,6 @@ export default function Dashboard() {
   const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [showReadingModal, setShowReadingModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
-  const [showUsagePopup, setShowUsagePopup] = useState(false);
   const [selectedPropertyId, setSelectedPropertyId] = useState<string | undefined>();
   const [selectedActivity, setSelectedActivity] = useState<ActivityItem | null>(null);
 
@@ -133,15 +131,12 @@ export default function Dashboard() {
       } else {
         next.add(propertyId);
       }
-      // Show usage popup when at least one property is selected
-      setShowUsagePopup(next.size > 0);
       return next;
     });
   };
 
   const clearFilters = () => {
     setFilterPropertyIds(new Set());
-    setShowUsagePopup(false);
   };
 
   // Filtered data for activity table
@@ -227,7 +222,7 @@ export default function Dashboard() {
       )}
 
       {/* Balance Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
         {data.properties.map((property) => (
           <BalanceCard
             key={property.id}
@@ -242,6 +237,48 @@ export default function Dashboard() {
           />
         ))}
       </div>
+
+      {/* Usage History - Inline when properties selected */}
+      {filterPropertyIds.size > 0 && (
+        <div className="card mb-6">
+          <h2 className="text-lg font-semibold mb-4">Usage History</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {selectedPropertiesUsage.map(({ propertyId, propertyName, usage }) => (
+              <div key={propertyId}>
+                <h3 className="font-medium mb-3 text-[var(--muted)]">{propertyName}</h3>
+                {usage.length > 0 ? (
+                  <div className="h-32 flex items-end gap-2">
+                    {usage.map((item, index) => {
+                      const maxUsage = Math.max(...usage.map((h) => h.usage));
+                      const height = maxUsage > 0 ? (item.usage / maxUsage) * 100 : 0;
+                      const isLast = index === usage.length - 1;
+
+                      return (
+                        <div key={item.period} className="flex-1 flex flex-col items-center">
+                          <span className="text-xs text-[var(--muted)] mb-1">
+                            {(item.usage / 1000).toFixed(1)}k
+                          </span>
+                          <div
+                            className={`w-full rounded-t-lg transition-all ${
+                              isLast ? 'bg-[var(--primary)]' : 'bg-[var(--primary)]/40'
+                            }`}
+                            style={{ height: `${Math.max(height, 4)}%` }}
+                          />
+                          <span className={`text-xs mt-2 ${isLast ? 'text-[var(--primary)] font-medium' : 'text-[var(--muted)]'}`}>
+                            {formatShortPeriod(item.period)}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <p className="text-[var(--muted)] text-sm">No usage history available</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Activity History */}
       <div className="card">
@@ -288,49 +325,6 @@ export default function Dashboard() {
           sortDirection={sortDirection}
         />
       </div>
-
-      {/* Usage Chart Popup */}
-      <Modal
-        isOpen={showUsagePopup}
-        onClose={() => setShowUsagePopup(false)}
-        title="Usage History"
-      >
-        <div className="space-y-6">
-          {selectedPropertiesUsage.map(({ propertyId, propertyName, usage }) => (
-            <div key={propertyId}>
-              <h3 className="font-semibold mb-3">{propertyName}</h3>
-              {usage.length > 0 ? (
-                <div className="h-32 flex items-end gap-2">
-                  {usage.map((item, index) => {
-                    const maxUsage = Math.max(...usage.map((h) => h.usage));
-                    const height = maxUsage > 0 ? (item.usage / maxUsage) * 100 : 0;
-                    const isLast = index === usage.length - 1;
-
-                    return (
-                      <div key={item.period} className="flex-1 flex flex-col items-center">
-                        <span className="text-xs text-[var(--muted)] mb-1">
-                          {(item.usage / 1000).toFixed(1)}k
-                        </span>
-                        <div
-                          className={`w-full rounded-t-lg transition-all ${
-                            isLast ? 'bg-[var(--primary)]' : 'bg-[var(--primary)]/40'
-                          }`}
-                          style={{ height: `${Math.max(height, 4)}%` }}
-                        />
-                        <span className={`text-xs mt-2 ${isLast ? 'text-[var(--primary)] font-medium' : 'text-[var(--muted)]'}`}>
-                          {formatShortPeriod(item.period)}
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
-              ) : (
-                <p className="text-[var(--muted)] text-sm">No usage history available</p>
-              )}
-            </div>
-          ))}
-        </div>
-      </Modal>
 
       {/* Modals */}
       <AddPaymentModal
