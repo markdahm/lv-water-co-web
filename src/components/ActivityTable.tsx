@@ -9,6 +9,8 @@ interface ActivityTableProps {
   properties: Property[];
   readings: MeterReading[];
   payments: Payment[];
+  onDeletePayment?: (paymentId: string) => void;
+  onDeleteReading?: (readingId: string) => void;
 }
 
 type SortField = 'date' | 'property' | 'type' | 'amount';
@@ -16,6 +18,7 @@ type SortDirection = 'asc' | 'desc';
 
 interface ActivityItem {
   id: string;
+  originalId: string;
   date: string;
   type: 'payment' | 'reading';
   propertyId: string;
@@ -25,9 +28,19 @@ interface ActivityItem {
   usage?: number;
 }
 
-export default function ActivityTable({ properties, readings, payments }: ActivityTableProps) {
+export default function ActivityTable({ properties, readings, payments, onDeletePayment, onDeleteReading }: ActivityTableProps) {
   const [sortField, setSortField] = useState<SortField>('date');
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
+  const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null);
+
+  const handleDelete = (activity: ActivityItem) => {
+    if (activity.type === 'payment' && onDeletePayment) {
+      onDeletePayment(activity.originalId);
+    } else if (activity.type === 'reading' && onDeleteReading) {
+      onDeleteReading(activity.originalId);
+    }
+    setDeleteConfirm(null);
+  };
 
   const propertyMap = useMemo(() => {
     return new Map(properties.map(p => [p.id, p.name]));
@@ -40,6 +53,7 @@ export default function ActivityTable({ properties, readings, payments }: Activi
     for (const payment of payments) {
       items.push({
         id: `payment-${payment.id}`,
+        originalId: payment.id,
         date: payment.receivedDate,
         type: 'payment',
         propertyId: payment.propertyId,
@@ -53,6 +67,7 @@ export default function ActivityTable({ properties, readings, payments }: Activi
     for (const reading of readings) {
       items.push({
         id: `reading-${reading.id}`,
+        originalId: reading.id,
         date: reading.readingDate,
         type: 'reading',
         propertyId: reading.propertyId,
@@ -137,6 +152,36 @@ export default function ActivityTable({ properties, readings, payments }: Activi
           {activity.description && activity.type === 'payment' && activity.description !== 'Payment received' && (
             <p className="text-sm text-[var(--muted)] mt-2">{activity.description}</p>
           )}
+          {(onDeletePayment || onDeleteReading) && (
+            <div className="mt-3 pt-3 border-t border-[var(--border)]">
+              {deleteConfirm === activity.id ? (
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-[var(--muted)]">Delete this {activity.type}?</span>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => setDeleteConfirm(null)}
+                      className="px-3 py-1 text-sm rounded-lg bg-[var(--border)] hover:bg-[var(--border)]/80"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      onClick={() => handleDelete(activity)}
+                      className="px-3 py-1 text-sm rounded-lg bg-red-500 text-white hover:bg-red-600"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <button
+                  onClick={() => setDeleteConfirm(activity.id)}
+                  className="text-sm text-red-500 hover:text-red-600"
+                >
+                  Delete
+                </button>
+              )}
+            </div>
+          )}
         </div>
       ))}
     </div>
@@ -173,6 +218,7 @@ export default function ActivityTable({ properties, readings, payments }: Activi
             >
               Amount <SortIcon field="amount" />
             </th>
+            {(onDeletePayment || onDeleteReading) && <th className="w-24"></th>}
           </tr>
         </thead>
         <tbody>
@@ -197,6 +243,36 @@ export default function ActivityTable({ properties, readings, payments }: Activi
                   <span className="text-[var(--primary)]">{activity.usage?.toLocaleString()} gal</span>
                 )}
               </td>
+              {(onDeletePayment || onDeleteReading) && (
+                <td className="text-right">
+                  {deleteConfirm === activity.id ? (
+                    <div className="flex items-center justify-end gap-2">
+                      <button
+                        onClick={() => setDeleteConfirm(null)}
+                        className="px-2 py-1 text-xs rounded bg-[var(--border)] hover:bg-[var(--border)]/80"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        onClick={() => handleDelete(activity)}
+                        className="px-2 py-1 text-xs rounded bg-red-500 text-white hover:bg-red-600"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  ) : (
+                    <button
+                      onClick={() => setDeleteConfirm(activity.id)}
+                      className="p-1 text-[var(--muted)] hover:text-red-500 transition-colors"
+                      title="Delete"
+                    >
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                      </svg>
+                    </button>
+                  )}
+                </td>
+              )}
             </tr>
           ))}
         </tbody>

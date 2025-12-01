@@ -49,6 +49,30 @@ export default function Dashboard() {
     await saveData(newData);
   };
 
+  const handleDeletePayment = async (paymentId: string) => {
+    if (!data) return;
+
+    const newData = {
+      ...data,
+      payments: data.payments.filter(p => p.id !== paymentId),
+    };
+
+    setData(newData);
+    await saveData(newData);
+  };
+
+  const handleDeleteReading = async (readingId: string) => {
+    if (!data) return;
+
+    const newData = {
+      ...data,
+      readings: data.readings.filter(r => r.id !== readingId),
+    };
+
+    setData(newData);
+    await saveData(newData);
+  };
+
   const openPaymentModal = (propertyId?: string) => {
     setSelectedPropertyId(propertyId);
     setShowPaymentModal(true);
@@ -138,6 +162,8 @@ export default function Dashboard() {
           properties={data.properties}
           readings={data.readings}
           payments={data.payments}
+          onDeletePayment={handleDeletePayment}
+          onDeleteReading={handleDeleteReading}
         />
       </div>
 
