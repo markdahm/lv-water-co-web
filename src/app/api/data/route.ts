@@ -1,67 +1,40 @@
 import { NextResponse } from 'next/server';
+import { put, list } from '@vercel/blob';
 import { promises as fs } from 'fs';
 import path from 'path';
+import initialData from '../../../../data/data.json';
 
 const DATA_FILE = path.join(process.cwd(), 'data', 'data.json');
-
-// GitHub API configuration (for production)
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const GITHUB_REPO = process.env.GITHUB_REPO || 'jakecdahm/lv-water-co-web';
-const GITHUB_FILE_PATH = 'data/data.json';
-
-async function readFromGitHub() {
-  const res = await fetch(
-    `https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}`,
-    {
-      headers: {
-        Authorization: `Bearer ${GITHUB_TOKEN}`,
-        Accept: 'application/vnd.github.v3+json',
-      },
-      cache: 'no-store',
-    }
-  );
-
-  if (!res.ok) {
-    throw new Error('Failed to read from GitHub');
-  }
-
-  const { content, sha } = await res.json();
-  const data = JSON.parse(Buffer.from(content, 'base64').toString('utf-8'));
-  return { data, sha };
-}
-
-async function writeToGitHub(data: object, sha: string) {
-  const content = Buffer.from(JSON.stringify(data, null, 2)).toString('base64');
-
-  const res = await fetch(
-    `https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}`,
-    {
-      method: 'PUT',
-      headers: {
-        Authorization: `Bearer ${GITHUB_TOKEN}`,
-        Accept: 'application/vnd.github.v3+json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        message: 'Update data via web app',
-        content,
-        sha,
-      }),
-    }
-  );
-
-  if (!res.ok) {
-    throw new Error('Failed to write to GitHub');
-  }
-}
+const BLOB_FILENAME = 'lv-water-co-data.json';
 
 // GET: Read data
 export async function GET() {
   try {
-    // Use GitHub API in production, local file in development
-    if (GITHUB_TOKEN && process.env.NODE_ENV === 'production') {
-      const { data } = await readFromGitHub();
-      return NextResponse.json(data);
+    // Use Vercel Blob in production
+    if (process.env.BLOB_READ_WRITE_TOKEN) {
+      try {
+        // List blobs to find our data file
+        const { blobs } = await list({ prefix: BLOB_FILENAME });
+
+        if (blobs.length > 0) {
+          // Fetch the existing blob
+          const response = await fetch(blobs[0].url, { cache: 'no-store' });
+          if (response.ok) {
+            const data = await response.json();
+            return NextResponse.json(data);
+          }
+        }
+      } catch (e) {
+        console.error('Error listing blobs:', e);
+      }
+
+      // Initialize blob with bundled initial data if it doesn't exist
+      await put(BLOB_FILENAME, JSON.stringify(initialData, null, 2), {
+        access: 'public',
+        addRandomSuffix: false,
+      });
+
+      return NextResponse.json(initialData);
     }
 
     // Local file for development
@@ -82,10 +55,24 @@ export async function POST(request: Request) {
   try {
     const data = await request.json();
 
-    // Use GitHub API in production
-    if (GITHUB_TOKEN && process.env.NODE_ENV === 'production') {
-      const { sha } = await readFromGitHub();
-      await writeToGitHub(data, sha);
+    // Use Vercel Blob in production
+    if (process.env.BLOB_READ_WRITE_TOKEN) {
+      // Delete existing blob first to avoid conflicts
+      try {
+        const { blobs } = await list({ prefix: BLOB_FILENAME });
+        if (blobs.length > 0) {
+          const { del } = await import('@vercel/blob');
+          await del(blobs[0].url);
+        }
+      } catch (e) {
+        // Ignore delete errors
+        console.log('Delete before put:', e);
+      }
+
+      await put(BLOB_FILENAME, JSON.stringify(data, null, 2), {
+        access: 'public',
+        addRandomSuffix: false,
+      });
       return NextResponse.json({ success: true });
     }
 
@@ -94,8 +81,9 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Error writing data:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     return NextResponse.json(
-      { error: 'Failed to write data' },
+      { error: 'Failed to write data', details: errorMessage },
       { status: 500 }
     );
   }

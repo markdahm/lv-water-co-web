@@ -1,1849 +1,1584 @@
 {
-  "invoices" : [
+  "invoices": [
     {
-      "amountDue" : 255.71000000000004,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-28",
-      "id" : "F3A89B86-06BC-43D1-A153-6971B85C3A88",
-      "previousBalance" : -239.96000000000004,
-      "propertyId" : "prop1",
-      "tier1Charge" : 0.75,
-      "tier1Gallons" : 2500,
-      "tier2Charge" : 0,
-      "tier2Gallons" : 0,
-      "tier3Charge" : 0,
-      "tier3Gallons" : 0,
-      "totalAmount" : 15.75,
-      "totalGallons" : 2500
+      "amountDue": 255.71000000000004,
+      "billingPeriod": "2025-10",
+      "fixedCharge": 15,
+      "generatedDate": "2025-11-28",
+      "id": "F3A89B86-06BC-43D1-A153-6971B85C3A88",
+      "previousBalance": -239.96000000000004,
+      "propertyId": "prop1",
+      "tier1Charge": 0.75,
+      "tier1Gallons": 2500,
+      "tier2Charge": 0,
+      "tier2Gallons": 0,
+      "tier3Charge": 0,
+      "tier3Gallons": 0,
+      "totalAmount": 15.75,
+      "totalGallons": 2500
     },
     {
-      "amountDue" : -848.0386000000002,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-28",
-      "id" : "819C2C54-F0D1-4C34-AFC1-465E847420DD",
-      "previousBalance" : 873.8200000000002,
-      "propertyId" : "prop2",
-      "tier1Charge" : 6,
-      "tier1Gallons" : 20000,
-      "tier2Charge" : 4.7814,
-      "tier2Gallons" : 12260,
-      "tier3Charge" : 0,
-      "tier3Gallons" : 0,
-      "totalAmount" : 25.781399999999998,
-      "totalGallons" : 32260
+      "amountDue": -848.0386000000002,
+      "billingPeriod": "2025-10",
+      "fixedCharge": 15,
+      "generatedDate": "2025-11-28",
+      "id": "819C2C54-F0D1-4C34-AFC1-465E847420DD",
+      "previousBalance": 873.8200000000002,
+      "propertyId": "prop2",
+      "tier1Charge": 6,
+      "tier1Gallons": 20000,
+      "tier2Charge": 4.7814,
+      "tier2Gallons": 12260,
+      "tier3Charge": 0,
+      "tier3Gallons": 0,
+      "totalAmount": 25.781399999999998,
+      "totalGallons": 32260
     },
     {
-      "amountDue" : 61.94399999999996,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-28",
-      "id" : "4A3D994B-9C54-452C-AAD3-D096E1747962",
-      "previousBalance" : -44.039999999999964,
-      "propertyId" : "prop3",
-      "tier1Charge" : 2.904,
-      "tier1Gallons" : 9680,
-      "tier2Charge" : 0,
-      "tier2Gallons" : 0,
-      "tier3Charge" : 0,
-      "tier3Gallons" : 0,
-      "totalAmount" : 17.904,
-      "totalGallons" : 9680
+      "amountDue": 61.94399999999996,
+      "billingPeriod": "2025-10",
+      "fixedCharge": 15,
+      "generatedDate": "2025-11-28",
+      "id": "4A3D994B-9C54-452C-AAD3-D096E1747962",
+      "previousBalance": -44.039999999999964,
+      "propertyId": "prop3",
+      "tier1Charge": 2.904,
+      "tier1Gallons": 9680,
+      "tier2Charge": 0,
+      "tier2Gallons": 0,
+      "tier3Charge": 0,
+      "tier3Gallons": 0,
+      "totalAmount": 17.904,
+      "totalGallons": 9680
     },
     {
-      "amountDue" : 59.43599999999999,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-28",
-      "id" : "0E357A32-F86C-4830-84B1-0D1B994DC798",
-      "previousBalance" : -41.75999999999999,
-      "propertyId" : "prop4",
-      "tier1Charge" : 2.6759999999999997,
-      "tier1Gallons" : 8920,
-      "tier2Charge" : 0,
-      "tier2Gallons" : 0,
-      "tier3Charge" : 0,
-      "tier3Gallons" : 0,
-      "totalAmount" : 17.676,
-      "totalGallons" : 8920
+      "amountDue": 59.43599999999999,
+      "billingPeriod": "2025-10",
+      "fixedCharge": 15,
+      "generatedDate": "2025-11-28",
+      "id": "0E357A32-F86C-4830-84B1-0D1B994DC798",
+      "previousBalance": -41.75999999999999,
+      "propertyId": "prop4",
+      "tier1Charge": 2.6759999999999997,
+      "tier1Gallons": 8920,
+      "tier2Charge": 0,
+      "tier2Gallons": 0,
+      "tier3Charge": 0,
+      "tier3Gallons": 0,
+      "totalAmount": 17.676,
+      "totalGallons": 8920
     },
     {
-      "amountDue" : 246.71000000000004,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "E1CEF4A7-7043-43F8-9CEA-C1811C53C0F4",
-      "previousBalance" : -224.21000000000004,
-      "propertyId" : "prop1",
-      "tier1Charge" : 7.5,
-      "tier1Gallons" : 2500,
-      "tier2Charge" : 0,
-      "tier2Gallons" : 0,
-      "tier3Charge" : 0,
-      "tier3Gallons" : 0,
-      "totalAmount" : 22.5,
-      "totalGallons" : 2500
+      "amountDue": 288.10800000000006,
+      "billingPeriod": "2025-08",
+      "fixedCharge": 15,
+      "generatedDate": "2025-11-29",
+      "id": "6E12374F-D4D7-4368-AF9D-BBCAE5CD6BB2",
+      "previousBalance": -179.21000000000004,
+      "propertyId": "prop1",
+      "tier1Charge": 45,
+      "tier1Gallons": 15000,
+      "tier2Charge": 39,
+      "tier2Gallons": 10000,
+      "tier3Charge": 9.898000000000001,
+      "tier3Gallons": 2020,
+      "totalAmount": 108.898,
+      "totalGallons": 27020
     },
     {
-      "amountDue" : -765.0274000000002,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "4908A4E5-8EAA-4D58-9464-2EBDB021E9D7",
-      "previousBalance" : 899.6014000000002,
-      "propertyId" : "prop2",
-      "tier1Charge" : 45,
-      "tier1Gallons" : 15000,
-      "tier2Charge" : 39,
-      "tier2Gallons" : 10000,
-      "tier3Charge" : 35.574,
-      "tier3Gallons" : 7260,
-      "totalAmount" : 134.574,
-      "totalGallons" : 32260
+      "amountDue": -992.5254000000002,
+      "billingPeriod": "2025-08",
+      "fixedCharge": 15,
+      "generatedDate": "2025-11-29",
+      "id": "60626C26-06CB-4C85-B156-DC0F767EB1AE",
+      "previousBalance": 1168.7494000000002,
+      "propertyId": "prop2",
+      "tier1Charge": 45,
+      "tier1Gallons": 15000,
+      "tier2Charge": 39,
+      "tier2Gallons": 10000,
+      "tier3Charge": 77.224,
+      "tier3Gallons": 15760,
+      "totalAmount": 176.224,
+      "totalGallons": 40760
     },
     {
-      "amountDue" : 70.17599999999996,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "9B8569D4-C265-4625-823A-CDAE54060DAE",
-      "previousBalance" : -26.135999999999967,
-      "propertyId" : "prop3",
-      "tier1Charge" : 29.04,
-      "tier1Gallons" : 9680,
-      "tier2Charge" : 0,
-      "tier2Gallons" : 0,
-      "tier3Charge" : 0,
-      "tier3Gallons" : 0,
-      "totalAmount" : 44.04,
-      "totalGallons" : 9680
+      "amountDue": 159.45799999999994,
+      "billingPeriod": "2025-08",
+      "fixedCharge": 15,
+      "generatedDate": "2025-11-29",
+      "id": "52D316CA-3D95-4690-94EA-7CE6B877313A",
+      "previousBalance": 61.944000000000074,
+      "propertyId": "prop3",
+      "tier1Charge": 45,
+      "tier1Gallons": 15000,
+      "tier2Charge": 39,
+      "tier2Gallons": 10000,
+      "tier3Charge": 122.40200000000002,
+      "tier3Gallons": 24980,
+      "totalAmount": 221.40200000000002,
+      "totalGallons": 49980
     },
     {
-      "amountDue" : 65.84400000000005,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "ECDB6A65-BA29-4710-A686-11EB1660328A",
-      "previousBalance" : -24.08400000000006,
-      "propertyId" : "prop4",
-      "tier1Charge" : 26.759999999999998,
-      "tier1Gallons" : 8920,
-      "tier2Charge" : 0,
-      "tier2Gallons" : 0,
-      "tier3Charge" : 0,
-      "tier3Gallons" : 0,
-      "totalAmount" : 41.76,
-      "totalGallons" : 8920
-    },
-    {
-      "amountDue" : 224.21000000000004,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "DE7EC622-E4D8-44FC-A623-253F2673DA94",
-      "previousBalance" : -201.71000000000004,
-      "propertyId" : "prop1",
-      "tier1Charge" : 7.5,
-      "tier1Gallons" : 2500,
-      "tier2Charge" : 0,
-      "tier2Gallons" : 0,
-      "tier3Charge" : 0,
-      "tier3Gallons" : 0,
-      "totalAmount" : 22.5,
-      "totalGallons" : 2500
-    },
-    {
-      "amountDue" : -899.6014,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "EFCC5F5F-A3E1-41C8-A347-56667539E6FC",
-      "previousBalance" : 1034.1754,
-      "propertyId" : "prop2",
-      "tier1Charge" : 45,
-      "tier1Gallons" : 15000,
-      "tier2Charge" : 39,
-      "tier2Gallons" : 10000,
-      "tier3Charge" : 35.574,
-      "tier3Gallons" : 7260,
-      "totalAmount" : 134.574,
-      "totalGallons" : 32260
-    },
-    {
-      "amountDue" : 26.136000000000003,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "F380AC61-5D67-4C0D-AD88-2E4FB81E5891",
-      "previousBalance" : 17.903999999999996,
-      "propertyId" : "prop3",
-      "tier1Charge" : 29.04,
-      "tier1Gallons" : 9680,
-      "tier2Charge" : 0,
-      "tier2Gallons" : 0,
-      "tier3Charge" : 0,
-      "tier3Gallons" : 0,
-      "totalAmount" : 44.04,
-      "totalGallons" : 9680
-    },
-    {
-      "amountDue" : 24.084000000000067,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "2B87B103-E7E4-4074-B1BB-7DB5755449C3",
-      "previousBalance" : 17.67599999999993,
-      "propertyId" : "prop4",
-      "tier1Charge" : 26.759999999999998,
-      "tier1Gallons" : 8920,
-      "tier2Charge" : 0,
-      "tier2Gallons" : 0,
-      "tier3Charge" : 0,
-      "tier3Gallons" : 0,
-      "totalAmount" : 41.76,
-      "totalGallons" : 8920
-    },
-    {
-      "amountDue" : 288.10800000000006,
-      "billingPeriod" : "2025-08",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "6E12374F-D4D7-4368-AF9D-BBCAE5CD6BB2",
-      "previousBalance" : -179.21000000000004,
-      "propertyId" : "prop1",
-      "tier1Charge" : 45,
-      "tier1Gallons" : 15000,
-      "tier2Charge" : 39,
-      "tier2Gallons" : 10000,
-      "tier3Charge" : 9.898000000000001,
-      "tier3Gallons" : 2020,
-      "totalAmount" : 108.898,
-      "totalGallons" : 27020
-    },
-    {
-      "amountDue" : -992.5254000000002,
-      "billingPeriod" : "2025-08",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "60626C26-06CB-4C85-B156-DC0F767EB1AE",
-      "previousBalance" : 1168.7494000000002,
-      "propertyId" : "prop2",
-      "tier1Charge" : 45,
-      "tier1Gallons" : 15000,
-      "tier2Charge" : 39,
-      "tier2Gallons" : 10000,
-      "tier3Charge" : 77.224,
-      "tier3Gallons" : 15760,
-      "totalAmount" : 176.224,
-      "totalGallons" : 40760
-    },
-    {
-      "amountDue" : 159.45799999999994,
-      "billingPeriod" : "2025-08",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "52D316CA-3D95-4690-94EA-7CE6B877313A",
-      "previousBalance" : 61.944000000000074,
-      "propertyId" : "prop3",
-      "tier1Charge" : 45,
-      "tier1Gallons" : 15000,
-      "tier2Charge" : 39,
-      "tier2Gallons" : 10000,
-      "tier3Charge" : 122.40200000000002,
-      "tier3Gallons" : 24980,
-      "totalAmount" : 221.40200000000002,
-      "totalGallons" : 49980
-    },
-    {
-      "amountDue" : 70.14000000000007,
-      "billingPeriod" : "2025-08",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "33C54C34-52E5-4750-A0C4-391241B3D424",
-      "previousBalance" : 59.43599999999992,
-      "propertyId" : "prop4",
-      "tier1Charge" : 45,
-      "tier1Gallons" : 15000,
-      "tier2Charge" : 39,
-      "tier2Gallons" : 10000,
-      "tier3Charge" : 30.576000000000004,
-      "tier3Gallons" : 6240,
-      "totalAmount" : 129.576,
-      "totalGallons" : 31240
-    },
-    {
-      "amountDue" : 92.8119999999999,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "7133C716-F055-4AD4-AB05-8DE94FC618FA",
-      "previousBalance" : -70.3119999999999,
-      "propertyId" : "prop1",
-      "tier1Charge" : 7.5,
-      "tier1Gallons" : 2500,
-      "tier2Charge" : 0,
-      "tier2Gallons" : 0,
-      "tier3Charge" : 0,
-      "tier3Gallons" : 0,
-      "totalAmount" : 22.5,
-      "totalGallons" : 2500
-    },
-    {
-      "amountDue" : -1210.3994,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "B8215486-87C1-46DC-A6F0-EE756EC13AE9",
-      "previousBalance" : 1344.9734,
-      "propertyId" : "prop2",
-      "tier1Charge" : 45,
-      "tier1Gallons" : 15000,
-      "tier2Charge" : 39,
-      "tier2Gallons" : 10000,
-      "tier3Charge" : 35.574,
-      "tier3Gallons" : 7260,
-      "totalAmount" : 134.574,
-      "totalGallons" : 32260
-    },
-    {
-      "amountDue" : -239.306,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "A51917AE-1DEE-4304-B128-E2BC56D63523",
-      "previousBalance" : 283.346,
-      "propertyId" : "prop3",
-      "tier1Charge" : 29.04,
-      "tier1Gallons" : 9680,
-      "tier2Charge" : 0,
-      "tier2Gallons" : 0,
-      "tier3Charge" : 0,
-      "tier3Gallons" : 0,
-      "totalAmount" : 44.04,
-      "totalGallons" : 9680
-    },
-    {
-      "amountDue" : -147.25199999999995,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "302BE5E8-AF68-441C-B76E-E43F3CF1C9EA",
-      "previousBalance" : 189.01199999999994,
-      "propertyId" : "prop4",
-      "tier1Charge" : 26.759999999999998,
-      "tier1Gallons" : 8920,
-      "tier2Charge" : 0,
-      "tier2Gallons" : 0,
-      "tier3Charge" : 0,
-      "tier3Gallons" : 0,
-      "totalAmount" : 41.76,
-      "totalGallons" : 8920
-    },
-    {
-      "amountDue" : 70.3119999999999,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "A1DBA352-6235-4B39-8785-9FBDCCDCB420",
-      "previousBalance" : -47.8119999999999,
-      "propertyId" : "prop1",
-      "tier1Charge" : 7.5,
-      "tier1Gallons" : 2500,
-      "tier2Charge" : 0,
-      "tier2Gallons" : 0,
-      "tier3Charge" : 0,
-      "tier3Gallons" : 0,
-      "totalAmount" : 22.5,
-      "totalGallons" : 2500
-    },
-    {
-      "amountDue" : -1344.9734,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "726460A7-0D24-4DE9-9DF3-965320EF529E",
-      "previousBalance" : 1479.5474000000002,
-      "propertyId" : "prop2",
-      "tier1Charge" : 45,
-      "tier1Gallons" : 15000,
-      "tier2Charge" : 39,
-      "tier2Gallons" : 10000,
-      "tier3Charge" : 35.574,
-      "tier3Gallons" : 7260,
-      "totalAmount" : 134.574,
-      "totalGallons" : 32260
-    },
-    {
-      "amountDue" : -283.34600000000006,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "CD945C26-1928-48D6-A0C9-E3B291A42EE3",
-      "previousBalance" : 327.3860000000001,
-      "propertyId" : "prop3",
-      "tier1Charge" : 29.04,
-      "tier1Gallons" : 9680,
-      "tier2Charge" : 0,
-      "tier2Gallons" : 0,
-      "tier3Charge" : 0,
-      "tier3Gallons" : 0,
-      "totalAmount" : 44.04,
-      "totalGallons" : 9680
-    },
-    {
-      "amountDue" : -189.01199999999994,
-      "billingPeriod" : "2025-10",
-      "fixedCharge" : 15,
-      "generatedDate" : "2025-11-29",
-      "id" : "D4835B60-8990-4D8E-AFD9-109E5A613958",
-      "previousBalance" : 230.77199999999993,
-      "propertyId" : "prop4",
-      "tier1Charge" : 26.759999999999998,
-      "tier1Gallons" : 8920,
-      "tier2Charge" : 0,
-      "tier2Gallons" : 0,
-      "tier3Charge" : 0,
-      "tier3Gallons" : 0,
-      "totalAmount" : 41.76,
-      "totalGallons" : 8920
+      "amountDue": 70.14000000000007,
+      "billingPeriod": "2025-08",
+      "fixedCharge": 15,
+      "generatedDate": "2025-11-29",
+      "id": "33C54C34-52E5-4750-A0C4-391241B3D424",
+      "previousBalance": 59.43599999999992,
+      "propertyId": "prop4",
+      "tier1Charge": 45,
+      "tier1Gallons": 15000,
+      "tier2Charge": 39,
+      "tier2Gallons": 10000,
+      "tier3Charge": 30.576000000000004,
+      "tier3Gallons": 6240,
+      "totalAmount": 129.576,
+      "totalGallons": 31240
     }
   ],
-  "neighbors" : [
+  "neighbors": [
     {
-      "createdAt" : "2025-11-28T23:55:23.308630",
-      "email" : "",
-      "id" : "n1",
-      "name" : "Dahm Family",
-      "notes" : "",
-      "propertyId" : "prop1"
+      "createdAt": "2025-11-28T23:55:23.308630",
+      "email": "",
+      "id": "n1",
+      "name": "Dahm Family",
+      "notes": "",
+      "propertyId": "prop1"
     },
     {
-      "createdAt" : "2025-11-28T23:55:23.308644",
-      "email" : "",
-      "id" : "n2",
-      "name" : "Patin Family",
-      "notes" : "",
-      "propertyId" : "prop2"
+      "createdAt": "2025-11-28T23:55:23.308644",
+      "email": "",
+      "id": "n2",
+      "name": "Patin Family",
+      "notes": "",
+      "propertyId": "prop2"
     },
     {
-      "createdAt" : "2025-11-28T23:55:23.308646",
-      "email" : "",
-      "id" : "n3",
-      "name" : "Vandeneynde Family",
-      "notes" : "2 meters",
-      "propertyId" : "prop3"
+      "createdAt": "2025-11-28T23:55:23.308646",
+      "email": "",
+      "id": "n3",
+      "name": "Vandeneynde Family",
+      "notes": "2 meters",
+      "propertyId": "prop3"
     },
     {
-      "createdAt" : "2025-11-28T23:55:23.308649",
-      "email" : "",
-      "id" : "n4",
-      "name" : "Alosi Family",
-      "notes" : "",
-      "propertyId" : "prop4"
+      "createdAt": "2025-11-28T23:55:23.308649",
+      "email": "",
+      "id": "n4",
+      "name": "Alosi Family",
+      "notes": "",
+      "propertyId": "prop4"
     }
   ],
-  "payments" : [
+  "payments": [
     {
-      "amount" : 50,
-      "id" : "payment1",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2024-02-04"
+      "amount": 50,
+      "id": "payment1",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2024-02-04"
     },
     {
-      "amount" : 32.16,
-      "id" : "payment2",
-      "notes" : "",
-      "propertyId" : "prop3",
-      "receivedDate" : "2024-01-01"
+      "amount": 32.16,
+      "id": "payment2",
+      "notes": "",
+      "propertyId": "prop3",
+      "receivedDate": "2024-01-01"
     },
     {
-      "amount" : 50,
-      "id" : "payment5",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2024-03-04"
+      "amount": 50,
+      "id": "payment5",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2024-03-04"
     },
     {
-      "amount" : 50,
-      "id" : "payment9",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2024-04-04"
+      "amount": 50,
+      "id": "payment9",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2024-04-04"
     },
     {
-      "amount" : 1550,
-      "id" : "payment17",
-      "notes" : "Special Assessment",
-      "propertyId" : "prop1",
-      "receivedDate" : "2024-05-05"
+      "amount": 1550,
+      "id": "payment17",
+      "notes": "Special Assessment",
+      "propertyId": "prop1",
+      "receivedDate": "2024-05-05"
     },
     {
-      "amount" : 50,
-      "id" : "payment21",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2024-06-04"
+      "amount": 50,
+      "id": "payment21",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2024-06-04"
     },
     {
-      "amount" : 50,
-      "id" : "payment25",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2024-07-02"
+      "amount": 50,
+      "id": "payment25",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2024-07-02"
     },
     {
-      "amount" : 50,
-      "id" : "payment29",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2024-08-03"
+      "amount": 50,
+      "id": "payment29",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2024-08-03"
     },
     {
-      "amount" : 50,
-      "id" : "payment33",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2024-09-03"
+      "amount": 50,
+      "id": "payment33",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2024-09-03"
     },
     {
-      "amount" : 251.81,
-      "id" : "payment37",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2024-10-06"
+      "amount": 251.81,
+      "id": "payment37",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2024-10-06"
     },
     {
-      "amount" : 50,
-      "id" : "payment41",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2024-11-01"
+      "amount": 50,
+      "id": "payment41",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2024-11-01"
     },
     {
-      "amount" : 50,
-      "id" : "payment45",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2024-12-01"
+      "amount": 50,
+      "id": "payment45",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2024-12-01"
     },
     {
-      "amount" : 1000,
-      "id" : "payment47",
-      "notes" : "",
-      "propertyId" : "prop2",
-      "receivedDate" : "2024-12-23"
+      "amount": 1000,
+      "id": "payment47",
+      "notes": "",
+      "propertyId": "prop2",
+      "receivedDate": "2024-12-23"
     },
     {
-      "amount" : 50,
-      "id" : "payment49",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2025-01-03"
+      "amount": 50,
+      "id": "payment49",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2025-01-03"
     },
     {
-      "amount" : 50,
-      "id" : "payment53",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2025-02-04"
+      "amount": 50,
+      "id": "payment53",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2025-02-04"
     },
     {
-      "amount" : 50,
-      "id" : "payment57",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2025-03-04"
+      "amount": 50,
+      "id": "payment57",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2025-03-04"
     },
     {
-      "amount" : 50,
-      "id" : "payment61",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2025-04-04"
+      "amount": 50,
+      "id": "payment61",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2025-04-04"
     },
     {
-      "amount" : 50,
-      "id" : "payment65",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2025-05-04"
+      "amount": 50,
+      "id": "payment65",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2025-05-04"
     },
     {
-      "amount" : 50,
-      "id" : "payment69",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2025-06-04"
+      "amount": 50,
+      "id": "payment69",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2025-06-04"
     },
     {
-      "amount" : 50,
-      "id" : "payment73",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2025-07-02"
+      "amount": 50,
+      "id": "payment73",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2025-07-02"
     },
     {
-      "amount" : 368.32,
-      "id" : "payment74",
-      "notes" : "Check 1098",
-      "propertyId" : "prop3",
-      "receivedDate" : "2025-07-06"
+      "amount": 368.32,
+      "id": "payment74",
+      "notes": "Check 1098",
+      "propertyId": "prop3",
+      "receivedDate": "2025-07-06"
     },
     {
-      "amount" : 681.21,
-      "id" : "payment96",
-      "notes" : "Check 1180",
-      "propertyId" : "prop3",
-      "receivedDate" : "2025-10-05"
+      "amount": 681.21,
+      "id": "payment96",
+      "notes": "Check 1180",
+      "propertyId": "prop3",
+      "receivedDate": "2025-10-05"
     },
     {
-      "amount" : 50,
-      "id" : "payment77",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2025-08-03"
+      "amount": 50,
+      "id": "payment77",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2025-08-03"
     },
     {
-      "amount" : 50,
-      "id" : "payment81",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2025-09-03"
+      "amount": 50,
+      "id": "payment81",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2025-09-03"
     },
     {
-      "amount" : 50,
-      "id" : "payment85",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2025-10-03"
+      "amount": 50,
+      "id": "payment85",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2025-10-03"
     },
     {
-      "amount" : 1000,
-      "id" : "payment87",
-      "notes" : "",
-      "propertyId" : "prop2",
-      "receivedDate" : "2024-01-01"
+      "amount": 1000,
+      "id": "payment87",
+      "notes": "",
+      "propertyId": "prop2",
+      "receivedDate": "2024-01-01"
     },
     {
-      "amount" : 50,
-      "id" : "payment89",
-      "notes" : "",
-      "propertyId" : "prop1",
-      "receivedDate" : "2025-11-01"
+      "amount": 50,
+      "id": "payment89",
+      "notes": "",
+      "propertyId": "prop1",
+      "receivedDate": "2025-11-01"
     },
     {
-      "amount" : 98.73,
-      "id" : "payment90",
-      "notes" : "Check 2152",
-      "propertyId" : "prop4",
-      "receivedDate" : "2025-03-21"
+      "amount": 98.73,
+      "id": "payment90",
+      "notes": "Check 2152",
+      "propertyId": "prop4",
+      "receivedDate": "2025-03-21"
     },
     {
-      "amount" : 126.7,
-      "id" : "payment91",
-      "notes" : "",
-      "propertyId" : "prop4",
-      "receivedDate" : "2025-06-10"
+      "amount": 126.7,
+      "id": "payment91",
+      "notes": "",
+      "propertyId": "prop4",
+      "receivedDate": "2025-06-10"
     },
     {
-      "amount" : 515.83,
-      "id" : "payment92",
-      "notes" : "Check 2281",
-      "propertyId" : "prop4",
-      "receivedDate" : "2025-07-11"
+      "amount": 515.83,
+      "id": "payment92",
+      "notes": "Check 2281",
+      "propertyId": "prop4",
+      "receivedDate": "2025-07-11"
     },
     {
-      "amount" : 209.78,
-      "id" : "payment93",
-      "notes" : "Check 2335",
-      "propertyId" : "prop4",
-      "receivedDate" : "2025-09-03"
+      "amount": 209.78,
+      "id": "payment93",
+      "notes": "Check 2335",
+      "propertyId": "prop4",
+      "receivedDate": "2025-09-03"
     },
     {
-      "amount" : 123.34,
-      "id" : "payment94",
-      "notes" : "Check 2367",
-      "propertyId" : "prop4",
-      "receivedDate" : "2025-09-29"
+      "amount": 123.34,
+      "id": "payment94",
+      "notes": "Check 2367",
+      "propertyId": "prop4",
+      "receivedDate": "2025-09-29"
     },
     {
-      "amount" : 97.91,
-      "id" : "payment95",
-      "notes" : "Check 2396",
-      "propertyId" : "prop4",
-      "receivedDate" : "2025-10-17"
+      "amount": 97.91,
+      "id": "payment95",
+      "notes": "Check 2396",
+      "propertyId": "prop4",
+      "receivedDate": "2025-10-17"
+    },
+    {
+      "amount": 1000,
+      "id": "payment97",
+      "notes": "Credit payment Sep-25",
+      "propertyId": "prop2",
+      "receivedDate": "2025-09-15"
     }
   ],
-  "properties" : [
+  "properties": [
     {
-      "address" : "9250 Linda Vista Lane\nGilroy, CA\n95020",
-      "balanceAdjustment" : -1494,
-      "id" : "prop1",
-      "meters" : [
+      "address": "9250 Linda Vista Lane\nGilroy, CA\n95020",
+      "balanceAdjustment": -1494,
+      "id": "prop1",
+      "meters": [
         {
-          "id" : "meter1",
-          "label" : "Main Meter",
-          "shift" : 0
+          "id": "meter1",
+          "label": "Main Meter",
+          "shift": 0
         }
       ],
-      "name" : "Dahm"
+      "name": "Dahm"
     },
     {
-      "address" : "9240 Linda Vista Lane\nGilroy, CA\n95020",
-      "balanceAdjustment" : 773,
-      "id" : "prop2",
-      "meters" : [
+      "address": "9240 Linda Vista Lane\nGilroy, CA\n95020",
+      "balanceAdjustment": 1773,
+      "id": "prop2",
+      "meters": [
         {
-          "id" : "meter2",
-          "label" : "Main Meter",
-          "shift" : 0
+          "id": "meter2",
+          "label": "Main Meter",
+          "shift": 0
         }
       ],
-      "name" : "Patin"
+      "name": "Patin"
     },
     {
-      "address" : "9260 Linda Vista Lane\nGilroy, CA\n95020",
-      "balanceAdjustment" : 896,
-      "id" : "prop3",
-      "meters" : [
+      "address": "9260 Linda Vista Lane\nGilroy, CA\n95020",
+      "balanceAdjustment": 896,
+      "id": "prop3",
+      "meters": [
         {
-          "id" : "meter3",
-          "label" : "Front Meter",
-          "shift" : 0
+          "id": "meter3",
+          "label": "Front Meter",
+          "shift": 0
         },
         {
-          "id" : "meter4",
-          "label" : "Back Meter",
-          "shift" : 0
+          "id": "meter4",
+          "label": "Back Meter",
+          "shift": 0
         }
       ],
-      "name" : "Vandeneynde"
+      "name": "Vandeneynde"
     },
     {
-      "address" : "9270 Linda Vista Lane\nGilroy, CA\n95020",
-      "balanceAdjustment" : 1916,
-      "id" : "prop4",
-      "meters" : [
+      "address": "9270 Linda Vista Lane\nGilroy, CA\n95020",
+      "balanceAdjustment": 1916,
+      "id": "prop4",
+      "meters": [
         {
-          "id" : "meter5",
-          "label" : "Main Meter",
-          "shift" : 0
+          "id": "meter5",
+          "label": "Main Meter",
+          "shift": 0
         }
       ],
-      "name" : "Alosi"
+      "name": "Alosi"
     }
   ],
-  "readings" : [
-    {
-      "billingPeriod" : "2024-01",
-      "id" : "reading1",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 980,
-      "readingDate" : "2024-01-01",
-      "readingValue" : 266995,
-      "usage" : 980
-    },
-    {
-      "billingPeriod" : "2024-02",
-      "id" : "reading2",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 1950,
-      "readingDate" : "2024-02-01",
-      "readingValue" : 267190,
-      "usage" : 1950
-    },
-    {
-      "billingPeriod" : "2024-03",
-      "id" : "reading3",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 2400,
-      "readingDate" : "2024-03-01",
-      "readingValue" : 267430,
-      "usage" : 2400
-    },
-    {
-      "billingPeriod" : "2024-04",
-      "id" : "reading4",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 11470,
-      "readingDate" : "2024-04-01",
-      "readingValue" : 268577,
-      "usage" : 11470
-    },
-    {
-      "billingPeriod" : "2024-05",
-      "id" : "reading5",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 21320,
-      "readingDate" : "2024-05-01",
-      "readingValue" : 270709,
-      "usage" : 21320
-    },
-    {
-      "billingPeriod" : "2024-06",
-      "id" : "reading6",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 29490,
-      "readingDate" : "2024-06-01",
-      "readingValue" : 273658,
-      "usage" : 29490
-    },
-    {
-      "billingPeriod" : "2024-07",
-      "id" : "reading7",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 28160,
-      "readingDate" : "2024-07-01",
-      "readingValue" : 276474,
-      "usage" : 28160
-    },
-    {
-      "billingPeriod" : "2024-08",
-      "id" : "reading8",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 22770,
-      "readingDate" : "2024-08-01",
-      "readingValue" : 278751,
-      "usage" : 22770
-    },
-    {
-      "billingPeriod" : "2024-09",
-      "id" : "reading9",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 24530,
-      "readingDate" : "2024-09-01",
-      "readingValue" : 281204,
-      "usage" : 24530
-    },
-    {
-      "billingPeriod" : "2024-10",
-      "id" : "reading10",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 32240,
-      "readingDate" : "2024-10-01",
-      "readingValue" : 284428,
-      "usage" : 32240
-    },
+  "readings": [
+    {
+      "billingPeriod": "2024-01",
+      "id": "reading1",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 980,
+      "readingDate": "2024-01-01",
+      "readingValue": 266995,
+      "usage": 980
+    },
+    {
+      "billingPeriod": "2024-02",
+      "id": "reading2",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 1950,
+      "readingDate": "2024-02-01",
+      "readingValue": 267190,
+      "usage": 1950
+    },
+    {
+      "billingPeriod": "2024-03",
+      "id": "reading3",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 2400,
+      "readingDate": "2024-03-01",
+      "readingValue": 267430,
+      "usage": 2400
+    },
+    {
+      "billingPeriod": "2024-04",
+      "id": "reading4",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 11470,
+      "readingDate": "2024-04-01",
+      "readingValue": 268577,
+      "usage": 11470
+    },
+    {
+      "billingPeriod": "2024-05",
+      "id": "reading5",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 21320,
+      "readingDate": "2024-05-01",
+      "readingValue": 270709,
+      "usage": 21320
+    },
+    {
+      "billingPeriod": "2024-06",
+      "id": "reading6",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 29490,
+      "readingDate": "2024-06-01",
+      "readingValue": 273658,
+      "usage": 29490
+    },
+    {
+      "billingPeriod": "2024-07",
+      "id": "reading7",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 28160,
+      "readingDate": "2024-07-01",
+      "readingValue": 276474,
+      "usage": 28160
+    },
+    {
+      "billingPeriod": "2024-08",
+      "id": "reading8",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 22770,
+      "readingDate": "2024-08-01",
+      "readingValue": 278751,
+      "usage": 22770
+    },
+    {
+      "billingPeriod": "2024-09",
+      "id": "reading9",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 24530,
+      "readingDate": "2024-09-01",
+      "readingValue": 281204,
+      "usage": 24530
+    },
+    {
+      "billingPeriod": "2024-10",
+      "id": "reading10",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 32240,
+      "readingDate": "2024-10-01",
+      "readingValue": 284428,
+      "usage": 32240
+    },
     {
-      "billingPeriod" : "2024-11",
-      "id" : "reading11",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 9540,
-      "readingDate" : "2024-11-01",
-      "readingValue" : 285382,
-      "usage" : 9540
-    },
-    {
-      "billingPeriod" : "2024-12",
-      "id" : "reading12",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 2090,
-      "readingDate" : "2024-12-01",
-      "readingValue" : 285591,
-      "usage" : 2090
-    },
-    {
-      "billingPeriod" : "2025-01",
-      "id" : "reading13",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 2540,
-      "readingDate" : "2025-01-01",
-      "readingValue" : 285845,
-      "usage" : 2540
-    },
-    {
-      "billingPeriod" : "2025-02",
-      "id" : "reading14",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 1090,
-      "readingDate" : "2025-02-01",
-      "readingValue" : 285954,
-      "usage" : 1090
-    },
-    {
-      "billingPeriod" : "2025-03",
-      "id" : "reading15",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 2600,
-      "readingDate" : "2025-03-01",
-      "readingValue" : 286214,
-      "usage" : 2600
-    },
-    {
-      "billingPeriod" : "2025-04",
-      "id" : "reading16",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 5940,
-      "readingDate" : "2025-04-01",
-      "readingValue" : 286808,
-      "usage" : 5940
-    },
-    {
-      "billingPeriod" : "2025-05",
-      "id" : "reading17",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 16845,
-      "readingDate" : "2025-05-01",
-      "readingValue" : 288492,
-      "usage" : 16845
-    },
-    {
-      "billingPeriod" : "2025-06",
-      "id" : "reading18",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 31284,
-      "readingDate" : "2025-06-01",
-      "readingValue" : 291621,
-      "usage" : 31284
-    },
-    {
-      "billingPeriod" : "2025-07",
-      "id" : "reading19",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 23890,
-      "readingDate" : "2025-07-01",
-      "readingValue" : 294010,
-      "usage" : 23890
-    },
-    {
-      "billingPeriod" : "2025-08",
-      "id" : "reading20",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 27020,
-      "readingDate" : "2025-08-01",
-      "readingValue" : 296712,
-      "usage" : 27020
-    },
-    {
-      "billingPeriod" : "2025-09",
-      "id" : "reading21",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 18880,
-      "readingDate" : "2025-09-01",
-      "readingValue" : 298600,
-      "usage" : 18880
-    },
-    {
-      "billingPeriod" : "2025-10",
-      "id" : "reading22",
-      "meterId" : "meter1",
-      "propertyId" : "prop1",
-      "rawUsage" : 2500,
-      "readingDate" : "2025-10-01",
-      "readingValue" : 298850,
-      "usage" : 2500
-    },
-    {
-      "billingPeriod" : "2024-01",
-      "id" : "reading23",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 4390,
-      "readingDate" : "2024-01-01",
-      "readingValue" : 506319,
-      "usage" : 4390
-    },
-    {
-      "billingPeriod" : "2024-02",
-      "id" : "reading24",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 2510,
-      "readingDate" : "2024-02-01",
-      "readingValue" : 506570,
-      "usage" : 2510
-    },
-    {
-      "billingPeriod" : "2024-03",
-      "id" : "reading25",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 1840,
-      "readingDate" : "2024-03-01",
-      "readingValue" : 506754,
-      "usage" : 1840
-    },
-    {
-      "billingPeriod" : "2024-04",
-      "id" : "reading26",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 5180,
-      "readingDate" : "2024-04-01",
-      "readingValue" : 507272,
-      "usage" : 5180
-    },
-    {
-      "billingPeriod" : "2024-05",
-      "id" : "reading27",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 15670,
-      "readingDate" : "2024-05-01",
-      "readingValue" : 508839,
-      "usage" : 15670
-    },
-    {
-      "billingPeriod" : "2024-06",
-      "id" : "reading28",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 10660,
-      "readingDate" : "2024-06-01",
-      "readingValue" : 509905,
-      "usage" : 10660
-    },
-    {
-      "billingPeriod" : "2024-07",
-      "id" : "reading29",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 18530,
-      "readingDate" : "2024-07-01",
-      "readingValue" : 511758,
-      "usage" : 18530
-    },
-    {
-      "billingPeriod" : "2024-08",
-      "id" : "reading30",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 38400,
-      "readingDate" : "2024-08-01",
-      "readingValue" : 515598,
-      "usage" : 38400
-    },
-    {
-      "billingPeriod" : "2024-09",
-      "id" : "reading31",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 19610,
-      "readingDate" : "2024-09-01",
-      "readingValue" : 517559,
-      "usage" : 19610
-    },
-    {
-      "billingPeriod" : "2024-10",
-      "id" : "reading32",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 23530,
-      "readingDate" : "2024-10-01",
-      "readingValue" : 519912,
-      "usage" : 23530
-    },
-    {
-      "billingPeriod" : "2024-11",
-      "id" : "reading33",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 14280,
-      "readingDate" : "2024-11-01",
-      "readingValue" : 521340,
-      "usage" : 14280
-    },
-    {
-      "billingPeriod" : "2024-12",
-      "id" : "reading34",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 5370,
-      "readingDate" : "2024-12-01",
-      "readingValue" : 521877,
-      "usage" : 5370
-    },
-    {
-      "billingPeriod" : "2025-01",
-      "id" : "reading35",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : -2140,
-      "readingDate" : "2025-01-01",
-      "readingValue" : 521663,
-      "usage" : -2140
-    },
-    {
-      "billingPeriod" : "2025-02",
-      "id" : "reading36",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 0,
-      "readingDate" : "2025-02-01",
-      "readingValue" : 521663,
-      "usage" : 0
-    },
-    {
-      "billingPeriod" : "2025-03",
-      "id" : "reading37",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 18500,
-      "readingDate" : "2025-03-01",
-      "readingValue" : 523513,
-      "usage" : 18500
-    },
-    {
-      "billingPeriod" : "2025-04",
-      "id" : "reading38",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 13130,
-      "readingDate" : "2025-04-01",
-      "readingValue" : 524826,
-      "usage" : 13130
-    },
-    {
-      "billingPeriod" : "2025-05",
-      "id" : "reading39",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 30316,
-      "readingDate" : "2025-05-01",
-      "readingValue" : 527857,
-      "usage" : 30316
-    },
-    {
-      "billingPeriod" : "2025-06",
-      "id" : "reading40",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 56303,
-      "readingDate" : "2025-06-01",
-      "readingValue" : 533488,
-      "usage" : 56303
-    },
-    {
-      "billingPeriod" : "2025-07",
-      "id" : "reading41",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 17420,
-      "readingDate" : "2025-07-01",
-      "readingValue" : 535230,
-      "usage" : 17420
-    },
-    {
-      "billingPeriod" : "2025-08",
-      "id" : "reading42",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 40760,
-      "readingDate" : "2025-08-01",
-      "readingValue" : 539306,
-      "usage" : 40760
-    },
-    {
-      "billingPeriod" : "2025-09",
-      "id" : "reading43",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 47120,
-      "readingDate" : "2025-09-01",
-      "readingValue" : 544018,
-      "usage" : 47120
-    },
-    {
-      "billingPeriod" : "2025-10",
-      "id" : "reading44",
-      "meterId" : "meter2",
-      "propertyId" : "prop2",
-      "rawUsage" : 32260,
-      "readingDate" : "2025-10-01",
-      "readingValue" : 547244,
-      "usage" : 32260
-    },
-    {
-      "billingPeriod" : "2024-01",
-      "id" : "reading45",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 100,
-      "readingDate" : "2024-01-01",
-      "readingValue" : 1078060,
-      "usage" : 100
-    },
-    {
-      "billingPeriod" : "2024-02",
-      "id" : "reading46",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 0,
-      "readingDate" : "2024-02-01",
-      "readingValue" : 1078060,
-      "usage" : 0
-    },
-    {
-      "billingPeriod" : "2024-03",
-      "id" : "reading47",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 100,
-      "readingDate" : "2024-03-01",
-      "readingValue" : 1078070,
-      "usage" : 100
-    },
-    {
-      "billingPeriod" : "2024-04",
-      "id" : "reading48",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 100,
-      "readingDate" : "2024-04-01",
-      "readingValue" : 1078080,
-      "usage" : 100
-    },
-    {
-      "billingPeriod" : "2024-05",
-      "id" : "reading49",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 11700,
-      "readingDate" : "2024-05-01",
-      "readingValue" : 1079250,
-      "usage" : 11700
-    },
-    {
-      "billingPeriod" : "2024-06",
-      "id" : "reading50",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 24600,
-      "readingDate" : "2024-06-01",
-      "readingValue" : 1081710,
-      "usage" : 24600
-    },
-    {
-      "billingPeriod" : "2024-07",
-      "id" : "reading51",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 31900,
-      "readingDate" : "2024-07-01",
-      "readingValue" : 1084900,
-      "usage" : 31900
-    },
-    {
-      "billingPeriod" : "2024-08",
-      "id" : "reading52",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 21860,
-      "readingDate" : "2024-08-01",
-      "readingValue" : 1087086,
-      "usage" : 21860
-    },
-    {
-      "billingPeriod" : "2024-09",
-      "id" : "reading53",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 67240,
-      "readingDate" : "2024-09-01",
-      "readingValue" : 1093810,
-      "usage" : 67240
-    },
-    {
-      "billingPeriod" : "2024-10",
-      "id" : "reading54",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 26400,
-      "readingDate" : "2024-10-01",
-      "readingValue" : 1096450,
-      "usage" : 26400
-    },
-    {
-      "billingPeriod" : "2024-11",
-      "id" : "reading55",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 3200,
-      "readingDate" : "2024-11-01",
-      "readingValue" : 1096770,
-      "usage" : 3200
-    },
-    {
-      "billingPeriod" : "2024-12",
-      "id" : "reading56",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 5100,
-      "readingDate" : "2024-12-01",
-      "readingValue" : 1097280,
-      "usage" : 5100
-    },
-    {
-      "billingPeriod" : "2025-01",
-      "id" : "reading57",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 500,
-      "readingDate" : "2025-01-01",
-      "readingValue" : 1097330,
-      "usage" : 500
-    },
-    {
-      "billingPeriod" : "2025-02",
-      "id" : "reading58",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 0,
-      "readingDate" : "2025-02-01",
-      "readingValue" : 1097330,
-      "usage" : 0
-    },
-    {
-      "billingPeriod" : "2025-03",
-      "id" : "reading59",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 100,
-      "readingDate" : "2025-03-01",
-      "readingValue" : 1097340,
-      "usage" : 100
-    },
-    {
-      "billingPeriod" : "2025-04",
-      "id" : "reading60",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 200,
-      "readingDate" : "2025-04-01",
-      "readingValue" : 1097360,
-      "usage" : 200
-    },
-    {
-      "billingPeriod" : "2025-05",
-      "id" : "reading61",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 21070,
-      "readingDate" : "2025-05-01",
-      "readingValue" : 1099467,
-      "usage" : 21070
-    },
-    {
-      "billingPeriod" : "2025-06",
-      "id" : "reading62",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 39130,
-      "readingDate" : "2025-06-01",
-      "readingValue" : 1103380,
-      "usage" : 39130
-    },
-    {
-      "billingPeriod" : "2025-07",
-      "id" : "reading63",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 43800,
-      "readingDate" : "2025-07-01",
-      "readingValue" : 1107760,
-      "usage" : 43800
-    },
-    {
-      "billingPeriod" : "2025-08",
-      "id" : "reading64",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 47200,
-      "readingDate" : "2025-08-01",
-      "readingValue" : 1112480,
-      "usage" : 47200
-    },
-    {
-      "billingPeriod" : "2025-09",
-      "id" : "reading65",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 62500,
-      "readingDate" : "2025-09-01",
-      "readingValue" : 1118730,
-      "usage" : 62500
-    },
-    {
-      "billingPeriod" : "2025-10",
-      "id" : "reading66",
-      "meterId" : "meter3",
-      "propertyId" : "prop3",
-      "rawUsage" : 1070,
-      "readingDate" : "2025-10-01",
-      "readingValue" : 1118837,
-      "usage" : 1070
-    },
-    {
-      "billingPeriod" : "2024-01",
-      "id" : "reading67",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 5620,
-      "readingDate" : "2024-01-01",
-      "readingValue" : 94273,
-      "usage" : 5620
-    },
-    {
-      "billingPeriod" : "2024-02",
-      "id" : "reading68",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 8460,
-      "readingDate" : "2024-02-01",
-      "readingValue" : 95119,
-      "usage" : 8460
-    },
-    {
-      "billingPeriod" : "2024-03",
-      "id" : "reading69",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 8920,
-      "readingDate" : "2024-03-01",
-      "readingValue" : 96011,
-      "usage" : 8920
-    },
-    {
-      "billingPeriod" : "2024-04",
-      "id" : "reading70",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 5830,
-      "readingDate" : "2024-04-01",
-      "readingValue" : 96594,
-      "usage" : 5830
-    },
-    {
-      "billingPeriod" : "2024-05",
-      "id" : "reading71",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 7380,
-      "readingDate" : "2024-05-01",
-      "readingValue" : 97332,
-      "usage" : 7380
-    },
-    {
-      "billingPeriod" : "2024-06",
-      "id" : "reading72",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 5960,
-      "readingDate" : "2024-06-01",
-      "readingValue" : 97928,
-      "usage" : 5960
-    },
-    {
-      "billingPeriod" : "2024-07",
-      "id" : "reading73",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 6710,
-      "readingDate" : "2024-07-01",
-      "readingValue" : 98599,
-      "usage" : 6710
-    },
-    {
-      "billingPeriod" : "2024-08",
-      "id" : "reading74",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 4630,
-      "readingDate" : "2024-08-01",
-      "readingValue" : 99062,
-      "usage" : 4630
-    },
-    {
-      "billingPeriod" : "2024-09",
-      "id" : "reading75",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 6640,
-      "readingDate" : "2024-09-01",
-      "readingValue" : 99726,
-      "usage" : 6640
-    },
-    {
-      "billingPeriod" : "2024-10",
-      "id" : "reading76",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 6460,
-      "readingDate" : "2024-10-01",
-      "readingValue" : 100372,
-      "usage" : 6460
-    },
-    {
-      "billingPeriod" : "2024-11",
-      "id" : "reading77",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 7480,
-      "readingDate" : "2024-11-01",
-      "readingValue" : 101120,
-      "usage" : 7480
-    },
-    {
-      "billingPeriod" : "2024-12",
-      "id" : "reading78",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 4070,
-      "readingDate" : "2024-12-01",
-      "readingValue" : 101527,
-      "usage" : 4070
-    },
-    {
-      "billingPeriod" : "2025-01",
-      "id" : "reading79",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 6970,
-      "readingDate" : "2025-01-01",
-      "readingValue" : 102224,
-      "usage" : 6970
-    },
-    {
-      "billingPeriod" : "2025-02",
-      "id" : "reading80",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 3500,
-      "readingDate" : "2025-02-01",
-      "readingValue" : 102574,
-      "usage" : 3500
-    },
-    {
-      "billingPeriod" : "2025-03",
-      "id" : "reading81",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 5550,
-      "readingDate" : "2025-03-01",
-      "readingValue" : 103129,
-      "usage" : 5550
-    },
-    {
-      "billingPeriod" : "2025-04",
-      "id" : "reading82",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 3320,
-      "readingDate" : "2025-04-01",
-      "readingValue" : 103461,
-      "usage" : 3320
-    },
-    {
-      "billingPeriod" : "2025-05",
-      "id" : "reading83",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 2523,
-      "readingDate" : "2025-05-01",
-      "readingValue" : 103713,
-      "usage" : 2523
-    },
-    {
-      "billingPeriod" : "2025-06",
-      "id" : "reading84",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 4686,
-      "readingDate" : "2025-06-01",
-      "readingValue" : 104182,
-      "usage" : 4686
-    },
-    {
-      "billingPeriod" : "2025-07",
-      "id" : "reading85",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 6060,
-      "readingDate" : "2025-07-01",
-      "readingValue" : 104788,
-      "usage" : 6060
-    },
-    {
-      "billingPeriod" : "2025-08",
-      "id" : "reading86",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 2780,
-      "readingDate" : "2025-08-01",
-      "readingValue" : 105066,
-      "usage" : 2780
-    },
-    {
-      "billingPeriod" : "2025-09",
-      "id" : "reading87",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 2670,
-      "readingDate" : "2025-09-01",
-      "readingValue" : 105333,
-      "usage" : 2670
-    },
-    {
-      "billingPeriod" : "2025-10",
-      "id" : "reading88",
-      "meterId" : "meter4",
-      "propertyId" : "prop3",
-      "rawUsage" : 8610,
-      "readingDate" : "2025-10-01",
-      "readingValue" : 106194,
-      "usage" : 8610
-    },
-    {
-      "billingPeriod" : "2024-01",
-      "id" : "reading89",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : -3280,
-      "readingDate" : "2024-01-01",
-      "readingValue" : 786434,
-      "usage" : -3280
-    },
-    {
-      "billingPeriod" : "2024-02",
-      "id" : "reading90",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 790,
-      "readingDate" : "2024-02-01",
-      "readingValue" : 786513,
-      "usage" : 790
-    },
-    {
-      "billingPeriod" : "2024-03",
-      "id" : "reading91",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 1340,
-      "readingDate" : "2024-03-01",
-      "readingValue" : 786647,
-      "usage" : 1340
-    },
-    {
-      "billingPeriod" : "2024-04",
-      "id" : "reading92",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 20040,
-      "readingDate" : "2024-04-01",
-      "readingValue" : 788651,
-      "usage" : 20040
-    },
-    {
-      "billingPeriod" : "2024-05",
-      "id" : "reading93",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 33670,
-      "readingDate" : "2024-05-01",
-      "readingValue" : 792018,
-      "usage" : 33670
-    },
-    {
-      "billingPeriod" : "2024-06",
-      "id" : "reading94",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 35380,
-      "readingDate" : "2024-06-01",
-      "readingValue" : 795556,
-      "usage" : 35380
-    },
-    {
-      "billingPeriod" : "2024-07",
-      "id" : "reading95",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 53790,
-      "readingDate" : "2024-07-01",
-      "readingValue" : 800935,
-      "usage" : 53790
-    },
-    {
-      "billingPeriod" : "2024-08",
-      "id" : "reading96",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 48050,
-      "readingDate" : "2024-08-01",
-      "readingValue" : 805740,
-      "usage" : 48050
-    },
-    {
-      "billingPeriod" : "2024-09",
-      "id" : "reading97",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 85350,
-      "readingDate" : "2024-09-01",
-      "readingValue" : 814275,
-      "usage" : 85350
-    },
-    {
-      "billingPeriod" : "2024-10",
-      "id" : "reading98",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 37390,
-      "readingDate" : "2024-10-01",
-      "readingValue" : 818014,
-      "usage" : 37390
-    },
-    {
-      "billingPeriod" : "2024-11",
-      "id" : "reading99",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 3170,
-      "readingDate" : "2024-11-01",
-      "readingValue" : 818331,
-      "usage" : 3170
-    },
-    {
-      "billingPeriod" : "2024-12",
-      "id" : "reading100",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 20,
-      "readingDate" : "2024-12-01",
-      "readingValue" : 818333,
-      "usage" : 20
-    },
-    {
-      "billingPeriod" : "2025-01",
-      "id" : "reading101",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 5760,
-      "readingDate" : "2025-01-01",
-      "readingValue" : 818909,
-      "usage" : 5760
-    },
-    {
-      "billingPeriod" : "2025-02",
-      "id" : "reading102",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 12130,
-      "readingDate" : "2025-02-01",
-      "readingValue" : 820122,
-      "usage" : 12130
-    },
-    {
-      "billingPeriod" : "2025-03",
-      "id" : "reading103",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 1930,
-      "readingDate" : "2025-03-01",
-      "readingValue" : 820315,
-      "usage" : 1930
-    },
-    {
-      "billingPeriod" : "2025-04",
-      "id" : "reading104",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 26770,
-      "readingDate" : "2025-04-01",
-      "readingValue" : 822992,
-      "usage" : 26770
-    },
-    {
-      "billingPeriod" : "2025-05",
-      "id" : "reading105",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 43295,
-      "readingDate" : "2025-05-01",
-      "readingValue" : 827321,
-      "usage" : 43295
-    },
-    {
-      "billingPeriod" : "2025-06",
-      "id" : "reading106",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 80405,
-      "readingDate" : "2025-06-01",
-      "readingValue" : 835362,
-      "usage" : 80405
-    },
-    {
-      "billingPeriod" : "2025-07",
-      "id" : "reading107",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 52710,
-      "readingDate" : "2025-07-01",
-      "readingValue" : 840633,
-      "usage" : 52710
-    },
-    {
-      "billingPeriod" : "2025-08",
-      "id" : "reading108",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 31240,
-      "readingDate" : "2025-08-01",
-      "readingValue" : 843757,
-      "usage" : 31240
-    },
-    {
-      "billingPeriod" : "2025-09",
-      "id" : "reading109",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 24720,
-      "readingDate" : "2025-09-01",
-      "readingValue" : 846229,
-      "usage" : 24720
-    },
-    {
-      "billingPeriod" : "2025-10",
-      "id" : "reading110",
-      "meterId" : "meter5",
-      "propertyId" : "prop4",
-      "rawUsage" : 8920,
-      "readingDate" : "2025-10-01",
-      "readingValue" : 847121,
-      "usage" : 8920
+      "billingPeriod": "2024-11",
+      "id": "reading11",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 9540,
+      "readingDate": "2024-11-01",
+      "readingValue": 285382,
+      "usage": 9540
+    },
+    {
+      "billingPeriod": "2024-12",
+      "id": "reading12",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 2090,
+      "readingDate": "2024-12-01",
+      "readingValue": 285591,
+      "usage": 2090
+    },
+    {
+      "billingPeriod": "2025-01",
+      "id": "reading13",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 2540,
+      "readingDate": "2025-01-01",
+      "readingValue": 285845,
+      "usage": 2540
+    },
+    {
+      "billingPeriod": "2025-02",
+      "id": "reading14",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 1090,
+      "readingDate": "2025-02-01",
+      "readingValue": 285954,
+      "usage": 1090
+    },
+    {
+      "billingPeriod": "2025-03",
+      "id": "reading15",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 2600,
+      "readingDate": "2025-03-01",
+      "readingValue": 286214,
+      "usage": 2600
+    },
+    {
+      "billingPeriod": "2025-04",
+      "id": "reading16",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 5940,
+      "readingDate": "2025-04-01",
+      "readingValue": 286808,
+      "usage": 5940
+    },
+    {
+      "billingPeriod": "2025-05",
+      "id": "reading17",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 16845,
+      "readingDate": "2025-05-01",
+      "readingValue": 288492,
+      "usage": 16845
+    },
+    {
+      "billingPeriod": "2025-06",
+      "id": "reading18",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 31284,
+      "readingDate": "2025-06-01",
+      "readingValue": 291621,
+      "usage": 31284
+    },
+    {
+      "billingPeriod": "2025-07",
+      "id": "reading19",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 23890,
+      "readingDate": "2025-07-01",
+      "readingValue": 294010,
+      "usage": 23890
+    },
+    {
+      "billingPeriod": "2025-08",
+      "id": "reading20",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 27020,
+      "readingDate": "2025-08-01",
+      "readingValue": 296712,
+      "usage": 27020
+    },
+    {
+      "billingPeriod": "2025-09",
+      "id": "reading21",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 18880,
+      "readingDate": "2025-09-01",
+      "readingValue": 298600,
+      "usage": 18880
+    },
+    {
+      "billingPeriod": "2025-10",
+      "id": "reading22",
+      "meterId": "meter1",
+      "propertyId": "prop1",
+      "rawUsage": 2500,
+      "readingDate": "2025-10-01",
+      "readingValue": 298850,
+      "usage": 2500
+    },
+    {
+      "billingPeriod": "2024-01",
+      "id": "reading23",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 4390,
+      "readingDate": "2024-01-01",
+      "readingValue": 506319,
+      "usage": 4390
+    },
+    {
+      "billingPeriod": "2024-02",
+      "id": "reading24",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 2510,
+      "readingDate": "2024-02-01",
+      "readingValue": 506570,
+      "usage": 2510
+    },
+    {
+      "billingPeriod": "2024-03",
+      "id": "reading25",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 1840,
+      "readingDate": "2024-03-01",
+      "readingValue": 506754,
+      "usage": 1840
+    },
+    {
+      "billingPeriod": "2024-04",
+      "id": "reading26",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 5180,
+      "readingDate": "2024-04-01",
+      "readingValue": 507272,
+      "usage": 5180
+    },
+    {
+      "billingPeriod": "2024-05",
+      "id": "reading27",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 15670,
+      "readingDate": "2024-05-01",
+      "readingValue": 508839,
+      "usage": 15670
+    },
+    {
+      "billingPeriod": "2024-06",
+      "id": "reading28",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 10660,
+      "readingDate": "2024-06-01",
+      "readingValue": 509905,
+      "usage": 10660
+    },
+    {
+      "billingPeriod": "2024-07",
+      "id": "reading29",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 18530,
+      "readingDate": "2024-07-01",
+      "readingValue": 511758,
+      "usage": 18530
+    },
+    {
+      "billingPeriod": "2024-08",
+      "id": "reading30",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 38400,
+      "readingDate": "2024-08-01",
+      "readingValue": 515598,
+      "usage": 38400
+    },
+    {
+      "billingPeriod": "2024-09",
+      "id": "reading31",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 19610,
+      "readingDate": "2024-09-01",
+      "readingValue": 517559,
+      "usage": 19610
+    },
+    {
+      "billingPeriod": "2024-10",
+      "id": "reading32",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 23530,
+      "readingDate": "2024-10-01",
+      "readingValue": 519912,
+      "usage": 23530
+    },
+    {
+      "billingPeriod": "2024-11",
+      "id": "reading33",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 14280,
+      "readingDate": "2024-11-01",
+      "readingValue": 521340,
+      "usage": 14280
+    },
+    {
+      "billingPeriod": "2024-12",
+      "id": "reading34",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 5370,
+      "readingDate": "2024-12-01",
+      "readingValue": 521877,
+      "usage": 5370
+    },
+    {
+      "billingPeriod": "2025-01",
+      "id": "reading35",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": -2140,
+      "readingDate": "2025-01-01",
+      "readingValue": 521663,
+      "usage": -2140
+    },
+    {
+      "billingPeriod": "2025-02",
+      "id": "reading36",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 0,
+      "readingDate": "2025-02-01",
+      "readingValue": 521663,
+      "usage": 0
+    },
+    {
+      "billingPeriod": "2025-03",
+      "id": "reading37",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 18500,
+      "readingDate": "2025-03-01",
+      "readingValue": 523513,
+      "usage": 18500
+    },
+    {
+      "billingPeriod": "2025-04",
+      "id": "reading38",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 13130,
+      "readingDate": "2025-04-01",
+      "readingValue": 524826,
+      "usage": 13130
+    },
+    {
+      "billingPeriod": "2025-05",
+      "id": "reading39",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 30316,
+      "readingDate": "2025-05-01",
+      "readingValue": 527857,
+      "usage": 30316
+    },
+    {
+      "billingPeriod": "2025-06",
+      "id": "reading40",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 56303,
+      "readingDate": "2025-06-01",
+      "readingValue": 533488,
+      "usage": 56303
+    },
+    {
+      "billingPeriod": "2025-07",
+      "id": "reading41",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 17420,
+      "readingDate": "2025-07-01",
+      "readingValue": 535230,
+      "usage": 17420
+    },
+    {
+      "billingPeriod": "2025-08",
+      "id": "reading42",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 40760,
+      "readingDate": "2025-08-01",
+      "readingValue": 539306,
+      "usage": 40760
+    },
+    {
+      "billingPeriod": "2025-09",
+      "id": "reading43",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 47120,
+      "readingDate": "2025-09-01",
+      "readingValue": 544018,
+      "usage": 47120
+    },
+    {
+      "billingPeriod": "2025-10",
+      "id": "reading44",
+      "meterId": "meter2",
+      "propertyId": "prop2",
+      "rawUsage": 32260,
+      "readingDate": "2025-10-01",
+      "readingValue": 547244,
+      "usage": 32260
+    },
+    {
+      "billingPeriod": "2024-01",
+      "id": "reading45",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 100,
+      "readingDate": "2024-01-01",
+      "readingValue": 1078060,
+      "usage": 100
+    },
+    {
+      "billingPeriod": "2024-02",
+      "id": "reading46",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 0,
+      "readingDate": "2024-02-01",
+      "readingValue": 1078060,
+      "usage": 0
+    },
+    {
+      "billingPeriod": "2024-03",
+      "id": "reading47",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 100,
+      "readingDate": "2024-03-01",
+      "readingValue": 1078070,
+      "usage": 100
+    },
+    {
+      "billingPeriod": "2024-04",
+      "id": "reading48",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 100,
+      "readingDate": "2024-04-01",
+      "readingValue": 1078080,
+      "usage": 100
+    },
+    {
+      "billingPeriod": "2024-05",
+      "id": "reading49",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 11700,
+      "readingDate": "2024-05-01",
+      "readingValue": 1079250,
+      "usage": 11700
+    },
+    {
+      "billingPeriod": "2024-06",
+      "id": "reading50",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 24600,
+      "readingDate": "2024-06-01",
+      "readingValue": 1081710,
+      "usage": 24600
+    },
+    {
+      "billingPeriod": "2024-07",
+      "id": "reading51",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 31900,
+      "readingDate": "2024-07-01",
+      "readingValue": 1084900,
+      "usage": 31900
+    },
+    {
+      "billingPeriod": "2024-08",
+      "id": "reading52",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 21860,
+      "readingDate": "2024-08-01",
+      "readingValue": 1087086,
+      "usage": 21860
+    },
+    {
+      "billingPeriod": "2024-09",
+      "id": "reading53",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 67240,
+      "readingDate": "2024-09-01",
+      "readingValue": 1093810,
+      "usage": 67240
+    },
+    {
+      "billingPeriod": "2024-10",
+      "id": "reading54",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 26400,
+      "readingDate": "2024-10-01",
+      "readingValue": 1096450,
+      "usage": 26400
+    },
+    {
+      "billingPeriod": "2024-11",
+      "id": "reading55",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 3200,
+      "readingDate": "2024-11-01",
+      "readingValue": 1096770,
+      "usage": 3200
+    },
+    {
+      "billingPeriod": "2024-12",
+      "id": "reading56",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 5100,
+      "readingDate": "2024-12-01",
+      "readingValue": 1097280,
+      "usage": 5100
+    },
+    {
+      "billingPeriod": "2025-01",
+      "id": "reading57",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 500,
+      "readingDate": "2025-01-01",
+      "readingValue": 1097330,
+      "usage": 500
+    },
+    {
+      "billingPeriod": "2025-02",
+      "id": "reading58",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 0,
+      "readingDate": "2025-02-01",
+      "readingValue": 1097330,
+      "usage": 0
+    },
+    {
+      "billingPeriod": "2025-03",
+      "id": "reading59",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 100,
+      "readingDate": "2025-03-01",
+      "readingValue": 1097340,
+      "usage": 100
+    },
+    {
+      "billingPeriod": "2025-04",
+      "id": "reading60",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 200,
+      "readingDate": "2025-04-01",
+      "readingValue": 1097360,
+      "usage": 200
+    },
+    {
+      "billingPeriod": "2025-05",
+      "id": "reading61",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 21070,
+      "readingDate": "2025-05-01",
+      "readingValue": 1099467,
+      "usage": 21070
+    },
+    {
+      "billingPeriod": "2025-06",
+      "id": "reading62",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 39130,
+      "readingDate": "2025-06-01",
+      "readingValue": 1103380,
+      "usage": 39130
+    },
+    {
+      "billingPeriod": "2025-07",
+      "id": "reading63",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 43800,
+      "readingDate": "2025-07-01",
+      "readingValue": 1107760,
+      "usage": 43800
+    },
+    {
+      "billingPeriod": "2025-08",
+      "id": "reading64",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 47200,
+      "readingDate": "2025-08-01",
+      "readingValue": 1112480,
+      "usage": 47200
+    },
+    {
+      "billingPeriod": "2025-09",
+      "id": "reading65",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 62500,
+      "readingDate": "2025-09-01",
+      "readingValue": 1118730,
+      "usage": 62500
+    },
+    {
+      "billingPeriod": "2025-10",
+      "id": "reading66",
+      "meterId": "meter3",
+      "propertyId": "prop3",
+      "rawUsage": 1070,
+      "readingDate": "2025-10-01",
+      "readingValue": 1118837,
+      "usage": 1070
+    },
+    {
+      "billingPeriod": "2024-01",
+      "id": "reading67",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 5620,
+      "readingDate": "2024-01-01",
+      "readingValue": 94273,
+      "usage": 5620
+    },
+    {
+      "billingPeriod": "2024-02",
+      "id": "reading68",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 8460,
+      "readingDate": "2024-02-01",
+      "readingValue": 95119,
+      "usage": 8460
+    },
+    {
+      "billingPeriod": "2024-03",
+      "id": "reading69",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 8920,
+      "readingDate": "2024-03-01",
+      "readingValue": 96011,
+      "usage": 8920
+    },
+    {
+      "billingPeriod": "2024-04",
+      "id": "reading70",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 5830,
+      "readingDate": "2024-04-01",
+      "readingValue": 96594,
+      "usage": 5830
+    },
+    {
+      "billingPeriod": "2024-05",
+      "id": "reading71",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 7380,
+      "readingDate": "2024-05-01",
+      "readingValue": 97332,
+      "usage": 7380
+    },
+    {
+      "billingPeriod": "2024-06",
+      "id": "reading72",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 5960,
+      "readingDate": "2024-06-01",
+      "readingValue": 97928,
+      "usage": 5960
+    },
+    {
+      "billingPeriod": "2024-07",
+      "id": "reading73",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 6710,
+      "readingDate": "2024-07-01",
+      "readingValue": 98599,
+      "usage": 6710
+    },
+    {
+      "billingPeriod": "2024-08",
+      "id": "reading74",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 4630,
+      "readingDate": "2024-08-01",
+      "readingValue": 99062,
+      "usage": 4630
+    },
+    {
+      "billingPeriod": "2024-09",
+      "id": "reading75",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 6640,
+      "readingDate": "2024-09-01",
+      "readingValue": 99726,
+      "usage": 6640
+    },
+    {
+      "billingPeriod": "2024-10",
+      "id": "reading76",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 6460,
+      "readingDate": "2024-10-01",
+      "readingValue": 100372,
+      "usage": 6460
+    },
+    {
+      "billingPeriod": "2024-11",
+      "id": "reading77",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 7480,
+      "readingDate": "2024-11-01",
+      "readingValue": 101120,
+      "usage": 7480
+    },
+    {
+      "billingPeriod": "2024-12",
+      "id": "reading78",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 4070,
+      "readingDate": "2024-12-01",
+      "readingValue": 101527,
+      "usage": 4070
+    },
+    {
+      "billingPeriod": "2025-01",
+      "id": "reading79",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 6970,
+      "readingDate": "2025-01-01",
+      "readingValue": 102224,
+      "usage": 6970
+    },
+    {
+      "billingPeriod": "2025-02",
+      "id": "reading80",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 3500,
+      "readingDate": "2025-02-01",
+      "readingValue": 102574,
+      "usage": 3500
+    },
+    {
+      "billingPeriod": "2025-03",
+      "id": "reading81",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 5550,
+      "readingDate": "2025-03-01",
+      "readingValue": 103129,
+      "usage": 5550
+    },
+    {
+      "billingPeriod": "2025-04",
+      "id": "reading82",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 3320,
+      "readingDate": "2025-04-01",
+      "readingValue": 103461,
+      "usage": 3320
+    },
+    {
+      "billingPeriod": "2025-05",
+      "id": "reading83",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 2523,
+      "readingDate": "2025-05-01",
+      "readingValue": 103713,
+      "usage": 2523
+    },
+    {
+      "billingPeriod": "2025-06",
+      "id": "reading84",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 4686,
+      "readingDate": "2025-06-01",
+      "readingValue": 104182,
+      "usage": 4686
+    },
+    {
+      "billingPeriod": "2025-07",
+      "id": "reading85",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 6060,
+      "readingDate": "2025-07-01",
+      "readingValue": 104788,
+      "usage": 6060
+    },
+    {
+      "billingPeriod": "2025-08",
+      "id": "reading86",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 2780,
+      "readingDate": "2025-08-01",
+      "readingValue": 105066,
+      "usage": 2780
+    },
+    {
+      "billingPeriod": "2025-09",
+      "id": "reading87",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 2670,
+      "readingDate": "2025-09-01",
+      "readingValue": 105333,
+      "usage": 2670
+    },
+    {
+      "billingPeriod": "2025-10",
+      "id": "reading88",
+      "meterId": "meter4",
+      "propertyId": "prop3",
+      "rawUsage": 8610,
+      "readingDate": "2025-10-01",
+      "readingValue": 106194,
+      "usage": 8610
+    },
+    {
+      "billingPeriod": "2024-01",
+      "id": "reading89",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": -3280,
+      "readingDate": "2024-01-01",
+      "readingValue": 786434,
+      "usage": -3280
+    },
+    {
+      "billingPeriod": "2024-02",
+      "id": "reading90",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 790,
+      "readingDate": "2024-02-01",
+      "readingValue": 786513,
+      "usage": 790
+    },
+    {
+      "billingPeriod": "2024-03",
+      "id": "reading91",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 1340,
+      "readingDate": "2024-03-01",
+      "readingValue": 786647,
+      "usage": 1340
+    },
+    {
+      "billingPeriod": "2024-04",
+      "id": "reading92",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 20040,
+      "readingDate": "2024-04-01",
+      "readingValue": 788651,
+      "usage": 20040
+    },
+    {
+      "billingPeriod": "2024-05",
+      "id": "reading93",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 33670,
+      "readingDate": "2024-05-01",
+      "readingValue": 792018,
+      "usage": 33670
+    },
+    {
+      "billingPeriod": "2024-06",
+      "id": "reading94",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 35380,
+      "readingDate": "2024-06-01",
+      "readingValue": 795556,
+      "usage": 35380
+    },
+    {
+      "billingPeriod": "2024-07",
+      "id": "reading95",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 53790,
+      "readingDate": "2024-07-01",
+      "readingValue": 800935,
+      "usage": 53790
+    },
+    {
+      "billingPeriod": "2024-08",
+      "id": "reading96",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 48050,
+      "readingDate": "2024-08-01",
+      "readingValue": 805740,
+      "usage": 48050
+    },
+    {
+      "billingPeriod": "2024-09",
+      "id": "reading97",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 85350,
+      "readingDate": "2024-09-01",
+      "readingValue": 814275,
+      "usage": 85350
+    },
+    {
+      "billingPeriod": "2024-10",
+      "id": "reading98",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 37390,
+      "readingDate": "2024-10-01",
+      "readingValue": 818014,
+      "usage": 37390
+    },
+    {
+      "billingPeriod": "2024-11",
+      "id": "reading99",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 3170,
+      "readingDate": "2024-11-01",
+      "readingValue": 818331,
+      "usage": 3170
+    },
+    {
+      "billingPeriod": "2024-12",
+      "id": "reading100",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 20,
+      "readingDate": "2024-12-01",
+      "readingValue": 818333,
+      "usage": 20
+    },
+    {
+      "billingPeriod": "2025-01",
+      "id": "reading101",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 5760,
+      "readingDate": "2025-01-01",
+      "readingValue": 818909,
+      "usage": 5760
+    },
+    {
+      "billingPeriod": "2025-02",
+      "id": "reading102",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 12130,
+      "readingDate": "2025-02-01",
+      "readingValue": 820122,
+      "usage": 12130
+    },
+    {
+      "billingPeriod": "2025-03",
+      "id": "reading103",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 1930,
+      "readingDate": "2025-03-01",
+      "readingValue": 820315,
+      "usage": 1930
+    },
+    {
+      "billingPeriod": "2025-04",
+      "id": "reading104",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 26770,
+      "readingDate": "2025-04-01",
+      "readingValue": 822992,
+      "usage": 26770
+    },
+    {
+      "billingPeriod": "2025-05",
+      "id": "reading105",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 43295,
+      "readingDate": "2025-05-01",
+      "readingValue": 827321,
+      "usage": 43295
+    },
+    {
+      "billingPeriod": "2025-06",
+      "id": "reading106",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 80405,
+      "readingDate": "2025-06-01",
+      "readingValue": 835362,
+      "usage": 80405
+    },
+    {
+      "billingPeriod": "2025-07",
+      "id": "reading107",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 52710,
+      "readingDate": "2025-07-01",
+      "readingValue": 840633,
+      "usage": 52710
+    },
+    {
+      "billingPeriod": "2025-08",
+      "id": "reading108",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 31240,
+      "readingDate": "2025-08-01",
+      "readingValue": 843757,
+      "usage": 31240
+    },
+    {
+      "billingPeriod": "2025-09",
+      "id": "reading109",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 24720,
+      "readingDate": "2025-09-01",
+      "readingValue": 846229,
+      "usage": 24720
+    },
+    {
+      "billingPeriod": "2025-10",
+      "id": "reading110",
+      "meterId": "meter5",
+      "propertyId": "prop4",
+      "rawUsage": 8920,
+      "readingDate": "2025-10-01",
+      "readingValue": 847121,
+      "usage": 8920
     }
   ],
-  "settings" : {
-    "fixedMonthlyFee" : 15,
-    "tier1Limit" : 15000,
-    "tier1RatePerThousand" : 3,
-    "tier2Limit" : 25000,
-    "tier2RatePerThousand" : 3.9,
-    "tier3Limit" : 100000,
-    "tier3RatePerThousand" : 4.9
+  "settings": {
+    "fixedMonthlyFee": 15,
+    "tier1Limit": 15000,
+    "tier1RatePerThousand": 3,
+    "tier2Limit": 25000,
+    "tier2RatePerThousand": 3.9,
+    "tier3Limit": 100000,
+    "tier3RatePerThousand": 4.9
   }
 }
