@@ -1,13 +1,15 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { AppData, Payment, MeterReading } from '@/lib/types';
 import { loadData, saveData } from '@/lib/data';
+import { getLastSixMonthsUsage, formatShortPeriod } from '@/lib/billing';
 import BalanceCard from '@/components/BalanceCard';
 import ActivityTable, { ActivityItem } from '@/components/ActivityTable';
 import AddPaymentModal from '@/components/AddPaymentModal';
 import AddReadingModal from '@/components/AddReadingModal';
 import EditActivityModal from '@/components/EditActivityModal';
+import Modal from '@/components/Modal';
 
 export default function Dashboard() {
   const [data, setData] = useState<AppData | null>(null);
@@ -18,8 +20,12 @@ export default function Dashboard() {
   const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [showReadingModal, setShowReadingModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
+  const [showUsagePopup, setShowUsagePopup] = useState(false);
   const [selectedPropertyId, setSelectedPropertyId] = useState<string | undefined>();
   const [selectedActivity, setSelectedActivity] = useState<ActivityItem | null>(null);
+
+  // Property filter state
+  const [filterPropertyIds, setFilterPropertyIds] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     loadData()
@@ -115,6 +121,50 @@ export default function Dashboard() {
     setShowReadingModal(true);
   };
 
+  const togglePropertyFilter = (propertyId: string) => {
+    setFilterPropertyIds(prev => {
+      const next = new Set(prev);
+      if (next.has(propertyId)) {
+        next.delete(propertyId);
+      } else {
+        next.add(propertyId);
+      }
+      // Show usage popup when at least one property is selected
+      setShowUsagePopup(next.size > 0);
+      return next;
+    });
+  };
+
+  const clearFilters = () => {
+    setFilterPropertyIds(new Set());
+    setShowUsagePopup(false);
+  };
+
+  // Filtered data for activity table
+  const filteredReadings = useMemo(() => {
+    if (!data || filterPropertyIds.size === 0) return data?.readings || [];
+    return data.readings.filter(r => filterPropertyIds.has(r.propertyId));
+  }, [data, filterPropertyIds]);
+
+  const filteredPayments = useMemo(() => {
+    if (!data || filterPropertyIds.size === 0) return data?.payments || [];
+    return data.payments.filter(p => filterPropertyIds.has(p.propertyId));
+  }, [data, filterPropertyIds]);
+
+  // Usage history for selected properties
+  const selectedPropertiesUsage = useMemo(() => {
+    if (!data || filterPropertyIds.size === 0) return [];
+    return Array.from(filterPropertyIds).map(propertyId => {
+      const property = data.properties.find(p => p.id === propertyId);
+      const usage = getLastSixMonthsUsage(propertyId, data.readings);
+      return {
+        propertyId,
+        propertyName: property?.name || 'Unknown',
+        usage,
+      };
+    });
+  }, [data, filterPropertyIds]);
+
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -189,14 +239,82 @@ export default function Dashboard() {
 
       {/* Activity History */}
       <div className="card">
-        <h2 className="text-lg font-semibold mb-4">Recent Activity</h2>
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+          <h2 className="text-lg font-semibold">Recent Activity</h2>
+          <div className="flex flex-wrap gap-2">
+            {data.properties.map((property) => (
+              <button
+                key={property.id}
+                onClick={() => togglePropertyFilter(property.id)}
+                className={`px-3 py-1 text-sm rounded-full transition-colors ${
+                  filterPropertyIds.has(property.id)
+                    ? 'bg-[var(--primary)] text-white'
+                    : 'bg-[var(--border)] text-[var(--foreground)] hover:bg-[var(--primary)]/20'
+                }`}
+              >
+                {property.name}
+              </button>
+            ))}
+            {filterPropertyIds.size > 0 && (
+              <button
+                onClick={clearFilters}
+                className="px-3 py-1 text-sm rounded-full bg-red-500/20 text-red-600 hover:bg-red-500/30 transition-colors"
+              >
+                Clear
+              </button>
+            )}
+          </div>
+        </div>
         <ActivityTable
           properties={data.properties}
-          readings={data.readings}
-          payments={data.payments}
+          readings={filteredReadings}
+          payments={filteredPayments}
           onEdit={openEditModal}
         />
       </div>
+
+      {/* Usage Chart Popup */}
+      <Modal
+        isOpen={showUsagePopup}
+        onClose={() => setShowUsagePopup(false)}
+        title="Usage History"
+      >
+        <div className="space-y-6">
+          {selectedPropertiesUsage.map(({ propertyId, propertyName, usage }) => (
+            <div key={propertyId}>
+              <h3 className="font-semibold mb-3">{propertyName}</h3>
+              {usage.length > 0 ? (
+                <div className="h-32 flex items-end gap-2">
+                  {usage.map((item, index) => {
+                    const maxUsage = Math.max(...usage.map((h) => h.usage));
+                    const height = maxUsage > 0 ? (item.usage / maxUsage) * 100 : 0;
+                    const isLast = index === usage.length - 1;
+
+                    return (
+                      <div key={item.period} className="flex-1 flex flex-col items-center">
+                        <span className="text-xs text-[var(--muted)] mb-1">
+                          {(item.usage / 1000).toFixed(1)}k
+                        </span>
+                        <div
+                          className={`w-full rounded-t-lg transition-all ${
+                            isLast ? 'bg-[var(--primary)]' : 'bg-[var(--primary)]/40'
+                          }`}
+                          style={{ height: `${Math.max(height, 4)}%` }}
+                        />
+                        <span className={`text-xs mt-2 ${isLast ? 'text-[var(--primary)] font-medium' : 'text-[var(--muted)]'}`}>
+                          {formatShortPeriod(item.period)}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <p className="text-[var(--muted)] text-sm">No usage history available</p>
+              )}
+            </div>
+          ))}
+        </div>
+      </Modal>
 
       {/* Modals */}
       <AddPaymentModal
