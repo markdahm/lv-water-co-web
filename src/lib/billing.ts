@@ -174,6 +174,6 @@ export function generateInvoice(
     fixedCharge: bill.fixedCharge,
     totalAmount: bill.totalAmount,
     previousBalance,
-    amountDue: previousBalance + bill.totalAmount,
+    amountDue: bill.totalAmount - previousBalance,
   };
 }
