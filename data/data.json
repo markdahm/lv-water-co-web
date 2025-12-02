@@ -601,6 +601,56 @@
       "readingValue": 847121,
       "rawUsage": 8920,
       "usage": 8920
+    },
+    {
+      "id": "7721146d-5c8d-48d4-a4f2-679e59e864c5",
+      "meterId": "8552b911-570c-4611-8545-0e14a487c052",
+      "propertyId": "5ad93f5e-a023-4e92-9820-785a2c40da61",
+      "readingDate": "2025-12-02",
+      "billingPeriod": "2025-12",
+      "readingValue": 299000,
+      "rawUsage": 150,
+      "usage": 1500
+    },
+    {
+      "id": "403580bd-93ab-4edd-8c07-2f7279c4aad8",
+      "meterId": "76ce00d4-2914-4f20-bdbd-e47b34b0ac47",
+      "propertyId": "0141936c-08ac-42b4-b23c-165ccde9ac79",
+      "readingDate": "2025-12-02",
+      "billingPeriod": "2025-12",
+      "readingValue": 547979,
+      "rawUsage": 735,
+      "usage": 7350
+    },
+    {
+      "id": "63b29f91-11d6-4083-953f-0d08684d5d80",
+      "meterId": "af7edc87-e574-4f1c-8f0e-9d3c6b9b1075",
+      "propertyId": "50b07373-176c-4f75-892d-0afa324eb86d",
+      "readingDate": "2025-12-02",
+      "billingPeriod": "2025-12",
+      "readingValue": 1119640,
+      "rawUsage": 803,
+      "usage": 8030
+    },
+    {
+      "id": "605d6603-b3bc-4742-a944-a57524046d5c",
+      "meterId": "6d864df0-321c-4e0a-95b1-aa72b52b7611",
+      "propertyId": "50b07373-176c-4f75-892d-0afa324eb86d",
+      "readingDate": "2025-12-02",
+      "billingPeriod": "2025-12",
+      "readingValue": 106516,
+      "rawUsage": 322,
+      "usage": 3220
+    },
+    {
+      "id": "e75734bb-855a-4716-9815-e9ae69223dcc",
+      "meterId": "eb7a4c27-3f7a-4016-b641-f35ea0682738",
+      "propertyId": "92c9ec31-1342-4c7b-a2c2-7c8ff48f7b85",
+      "readingDate": "2025-12-02",
+      "billingPeriod": "2025-12",
+      "readingValue": 847724,
+      "rawUsage": 603,
+      "usage": 6030
     }
   ],
   "invoices": [
@@ -685,9 +735,9 @@
       "tier2Charge": 0,
       "tier3Charge": 0,
       "fixedCharge": 15,
-      "totalAmount": 15.0,
+      "totalAmount": 15,
       "previousBalance": 0,
-      "amountDue": 15.0
+      "amountDue": 15
     },
     {
       "id": "115af1e3-80aa-4c6f-8fa7-892f257548de",
@@ -1289,63 +1339,63 @@
     {
       "id": "4277da81-5c97-477b-8c8e-fb9f324d45d7",
       "propertyId": "5ad93f5e-a023-4e92-9820-785a2c40da61",
-      "amount": 50.0,
+      "amount": 50,
       "receivedDate": "2025-02-04",
       "notes": ""
     },
     {
       "id": "50fbf3b3-0918-4f30-86ba-7fe079e3bbb4",
       "propertyId": "5ad93f5e-a023-4e92-9820-785a2c40da61",
-      "amount": 50.0,
+      "amount": 50,
       "receivedDate": "2025-03-04",
       "notes": ""
     },
     {
       "id": "e03029fc-bba0-4412-b34d-92b47811c288",
       "propertyId": "5ad93f5e-a023-4e92-9820-785a2c40da61",
-      "amount": 50.0,
+      "amount": 50,
       "receivedDate": "2025-04-04",
       "notes": ""
     },
     {
       "id": "87afcef5-b404-49a0-8ede-284d03ddd663",
       "propertyId": "5ad93f5e-a023-4e92-9820-785a2c40da61",
-      "amount": 50.0,
+      "amount": 50,
       "receivedDate": "2025-05-04",
       "notes": ""
     },
     {
       "id": "0bf807db-daf1-4316-916b-9f0a5cac433a",
       "propertyId": "5ad93f5e-a023-4e92-9820-785a2c40da61",
-      "amount": 50.0,
+      "amount": 50,
       "receivedDate": "2025-06-04",
       "notes": ""
     },
     {
       "id": "ff150e17-c2df-49fc-b66f-ea1a2a9629ef",
       "propertyId": "5ad93f5e-a023-4e92-9820-785a2c40da61",
-      "amount": 50.0,
+      "amount": 50,
       "receivedDate": "2025-07-02",
       "notes": ""
     },
     {
       "id": "e5b9b5d7-5d29-499c-a06b-15769bee3051",
       "propertyId": "5ad93f5e-a023-4e92-9820-785a2c40da61",
-      "amount": 50.0,
+      "amount": 50,
       "receivedDate": "2025-08-03",
       "notes": ""
     },
     {
       "id": "c35fbc22-518a-4280-a256-16d34728430a",
       "propertyId": "5ad93f5e-a023-4e92-9820-785a2c40da61",
-      "amount": 50.0,
+      "amount": 50,
       "receivedDate": "2025-09-03",
       "notes": ""
     },
     {
       "id": "90a67bc4-bc95-4d60-a919-663f00b6d9a0",
       "propertyId": "5ad93f5e-a023-4e92-9820-785a2c40da61",
-      "amount": 50.0,
+      "amount": 50,
       "receivedDate": "2025-10-03",
       "notes": ""
     },
@@ -1366,7 +1416,7 @@
     {
       "id": "cf10a516-a1e3-42d0-979b-3fa4bebdc6b9",
       "propertyId": "0141936c-08ac-42b4-b23c-165ccde9ac79",
-      "amount": 1000.0,
+      "amount": 1000,
       "receivedDate": "2025-09-15",
       "notes": ""
     },

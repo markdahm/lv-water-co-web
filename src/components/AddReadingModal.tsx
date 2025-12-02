@@ -65,7 +65,7 @@ export default function AddReadingModal({
     const newValue = parseInt(readingValue, 10);
     if (isNaN(newValue)) return null;
     const previousValue = previousReading?.readingValue || 0;
-    const usage = Math.max(0, newValue - previousValue);
+    const usage = Math.max(0, (newValue - previousValue) * 10);
     return calculateBill(usage, settings);
   }, [settings, readingValue, previousReading]);
 
@@ -84,7 +84,7 @@ export default function AddReadingModal({
       billingPeriod,
       readingValue: newValue,
       rawUsage,
-      usage: rawUsage,
+      usage: rawUsage * 10,
     };
 
     onSave(reading);
