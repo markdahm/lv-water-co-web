@@ -198,13 +198,6 @@ export default function ActivityTable({
               </span>
             </div>
           </div>
-          {isFiltered && activity.runningBalance !== undefined && (
-            <div className="mt-3 pt-3 border-t border-[var(--border)]">
-              <p className="text-sm font-medium">
-                Balance: <span className={activity.runningBalance < 0 ? 'text-green-600' : 'text-red-600'}>{formatCurrency(Math.abs(activity.runningBalance))}</span>
-              </p>
-            </div>
-          )}
           {activity.description && activity.type === 'payment' && activity.description !== 'Payment received' && (
             <p className="text-sm text-[var(--muted)] mt-2">{activity.description}</p>
           )}
@@ -257,7 +250,6 @@ export default function ActivityTable({
             >
               Amount <SortIcon field="amount" />
             </th>
-            {isFiltered && <th className="text-right">Running Balance</th>}
             {onEdit && <th className="w-16"></th>}
           </tr>
         </thead>
@@ -288,15 +280,6 @@ export default function ActivityTable({
                   </div>
                 )}
               </td>
-              {isFiltered && (
-                <td className="text-right font-medium">
-                  {activity.runningBalance !== undefined && (
-                    <span className={activity.runningBalance < 0 ? 'text-green-600' : 'text-red-600'}>
-                      {formatCurrency(Math.abs(activity.runningBalance))}
-                    </span>
-                  )}
-                </td>
-              )}
               {onEdit && (
                 <td className="text-right">
                   <button

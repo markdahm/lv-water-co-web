@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { AppData, BillingSettings } from '@/lib/types';
 import { loadData, saveData } from '@/lib/data';
-import { formatCurrency } from '@/lib/billing';
+import { formatCurrency, calculatePropertyBalance } from '@/lib/billing';
 import { useTheme } from '@/lib/theme';
 
 export default function SettingsPage() {
@@ -45,6 +45,105 @@ export default function SettingsPage() {
       setSettings(data.settings);
     }
     setEditing(false);
+  };
+
+  const handleExportData = () => {
+    if (!data) return;
+
+    // Build CSV content
+    const rows: string[] = [];
+
+    // Header row
+    rows.push('Property Name,Type,Date,Description,Amount,Balance');
+
+    // Create a map for property balances
+    const propertyBalances = new Map<string, number>();
+    data.properties.forEach(property => {
+      const balance = calculatePropertyBalance(
+        property,
+        data.readings,
+        data.payments,
+        data.settings
+      );
+      propertyBalances.set(property.id, balance);
+    });
+
+    // Combine all activities
+    const allActivities: Array<{
+      propertyId: string;
+      propertyName: string;
+      date: string;
+      type: 'reading' | 'payment';
+      description: string;
+      amount: number;
+    }> = [];
+
+    // Add payments
+    data.payments.forEach(payment => {
+      const propertyName = data.properties.find(p => p.id === payment.propertyId)?.name || 'Unknown';
+      allActivities.push({
+        propertyId: payment.propertyId,
+        propertyName,
+        date: payment.receivedDate,
+        type: 'payment',
+        description: payment.notes || 'Payment received',
+        amount: payment.amount,
+      });
+    });
+
+    // Add readings
+    data.readings.forEach(reading => {
+      const propertyName = data.properties.find(p => p.id === reading.propertyId)?.name || 'Unknown';
+      allActivities.push({
+        propertyId: reading.propertyId,
+        propertyName,
+        date: reading.readingDate,
+        type: 'reading',
+        description: `Meter reading: ${reading.readingValue.toLocaleString()} (Usage: ${reading.usage.toLocaleString()} gal)`,
+        amount: reading.usage,
+      });
+    });
+
+    // Sort by date
+    allActivities.sort((a, b) => a.date.localeCompare(b.date));
+
+    // Add rows for each activity
+    allActivities.forEach(activity => {
+      const balance = propertyBalances.get(activity.propertyId) || 0;
+      const amountStr = activity.amount.toString();
+      const balanceStr = balance.toFixed(2);
+
+      rows.push(
+        `"${activity.propertyName}","${activity.type}","${activity.date}","${activity.description.replace(/"/g, '""')}","${amountStr}","${balanceStr}"`
+      );
+    });
+
+    // Add final balances section
+    rows.push('');
+    rows.push('Final Customer Balances');
+    rows.push('Property Name,Current Balance,Status');
+
+    data.properties.forEach(property => {
+      const balance = propertyBalances.get(property.id) || 0;
+      const status = balance < 0 ? 'Credit' : balance > 0 ? 'Amount Due' : 'Paid';
+      rows.push(
+        `"${property.name}","${Math.abs(balance).toFixed(2)}","${status}"`
+      );
+    });
+
+    // Create and download CSV file
+    const csvContent = rows.join('\n');
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+
+    link.setAttribute('href', url);
+    link.setAttribute('download', `water-billing-export-${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   if (loading) {
@@ -253,7 +352,12 @@ export default function SettingsPage() {
 
       {/* Data Summary */}
       <div className="card">
-        <h2 className="text-lg font-semibold mb-4">Data Summary</h2>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-semibold">Data Summary</h2>
+          <button onClick={handleExportData} className="btn-primary text-sm">
+            Export Data
+          </button>
+        </div>
         <div className="grid grid-cols-2 gap-4">
           <div className="p-3 bg-[var(--border)] rounded-lg">
             <p className="text-2xl font-bold text-[var(--primary)]">{data.properties.length}</p>
