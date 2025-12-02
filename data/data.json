@@ -13,7 +13,7 @@
       "id": "5ad93f5e-a023-4e92-9820-785a2c40da61",
       "name": "Dahm",
       "address": "",
-      "balanceAdjustment": 209.46,
+      "balanceAdjustment": 45.26,
       "meters": [
         {
           "id": "8552b911-570c-4611-8545-0e14a487c052",
@@ -26,7 +26,7 @@
       "id": "50b07373-176c-4f75-892d-0afa324eb86d",
       "name": "Vandeneynde",
       "address": "",
-      "balanceAdjustment": 92.79,
+      "balanceAdjustment": -93.65,
       "meters": [
         {
           "id": "af7edc87-e574-4f1c-8f0e-9d3c6b9b1075",
@@ -44,7 +44,7 @@
       "id": "0141936c-08ac-42b4-b23c-165ccde9ac79",
       "name": "Patin",
       "address": "",
-      "balanceAdjustment": -836.77,
+      "balanceAdjustment": -996.92,
       "meters": [
         {
           "id": "76ce00d4-2914-4f20-bdbd-e47b34b0ac47",
@@ -57,7 +57,7 @@
       "id": "92c9ec31-1342-4c7b-a2c2-7c8ff48f7b85",
       "name": "Alosi",
       "address": "",
-      "balanceAdjustment": 74.85,
+      "balanceAdjustment": -61.24,
       "meters": [
         {
           "id": "eb7a4c27-3f7a-4016-b641-f35ea0682738",
@@ -603,51 +603,51 @@
       "usage": 8920
     },
     {
-      "id": "7721146d-5c8d-48d4-a4f2-679e59e864c5",
+      "id": "c6884750-eda7-4b80-a12c-997bc081cbd2",
       "meterId": "8552b911-570c-4611-8545-0e14a487c052",
       "propertyId": "5ad93f5e-a023-4e92-9820-785a2c40da61",
       "readingDate": "2025-12-02",
-      "billingPeriod": "2025-12",
+      "billingPeriod": "2025-11",
       "readingValue": 299000,
       "rawUsage": 150,
       "usage": 1500
     },
     {
-      "id": "403580bd-93ab-4edd-8c07-2f7279c4aad8",
-      "meterId": "76ce00d4-2914-4f20-bdbd-e47b34b0ac47",
-      "propertyId": "0141936c-08ac-42b4-b23c-165ccde9ac79",
-      "readingDate": "2025-12-02",
-      "billingPeriod": "2025-12",
-      "readingValue": 547979,
-      "rawUsage": 735,
-      "usage": 7350
-    },
-    {
-      "id": "63b29f91-11d6-4083-953f-0d08684d5d80",
-      "meterId": "af7edc87-e574-4f1c-8f0e-9d3c6b9b1075",
-      "propertyId": "50b07373-176c-4f75-892d-0afa324eb86d",
-      "readingDate": "2025-12-02",
-      "billingPeriod": "2025-12",
-      "readingValue": 1119640,
-      "rawUsage": 803,
-      "usage": 8030
-    },
-    {
-      "id": "605d6603-b3bc-4742-a944-a57524046d5c",
+      "id": "16b0d0a3-366f-4b16-9fe3-6d3a0f42b375",
       "meterId": "6d864df0-321c-4e0a-95b1-aa72b52b7611",
       "propertyId": "50b07373-176c-4f75-892d-0afa324eb86d",
       "readingDate": "2025-12-02",
-      "billingPeriod": "2025-12",
+      "billingPeriod": "2025-11",
       "readingValue": 106516,
       "rawUsage": 322,
       "usage": 3220
     },
     {
-      "id": "e75734bb-855a-4716-9815-e9ae69223dcc",
+      "id": "9f7435c4-dda1-42f7-b4a8-70fce4af1e5e",
+      "meterId": "af7edc87-e574-4f1c-8f0e-9d3c6b9b1075",
+      "propertyId": "50b07373-176c-4f75-892d-0afa324eb86d",
+      "readingDate": "2025-12-02",
+      "billingPeriod": "2025-11",
+      "readingValue": 1119640,
+      "rawUsage": 803,
+      "usage": 8030
+    },
+    {
+      "id": "4274504f-75cd-46ec-9cca-30750070a9e1",
+      "meterId": "76ce00d4-2914-4f20-bdbd-e47b34b0ac47",
+      "propertyId": "0141936c-08ac-42b4-b23c-165ccde9ac79",
+      "readingDate": "2025-12-02",
+      "billingPeriod": "2025-11",
+      "readingValue": 547979,
+      "rawUsage": 735,
+      "usage": 7350
+    },
+    {
+      "id": "e4b70043-d7de-4222-a4c9-0653124c009a",
       "meterId": "eb7a4c27-3f7a-4016-b641-f35ea0682738",
       "propertyId": "92c9ec31-1342-4c7b-a2c2-7c8ff48f7b85",
       "readingDate": "2025-12-02",
-      "billingPeriod": "2025-12",
+      "billingPeriod": "2025-11",
       "readingValue": 847724,
       "rawUsage": 603,
       "usage": 6030

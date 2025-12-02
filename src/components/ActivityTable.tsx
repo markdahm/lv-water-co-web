@@ -16,6 +16,8 @@ interface ActivityTableProps {
   onEdit?: (activity: ActivityItem) => void;
   sortField?: SortField;
   sortDirection?: SortDirection;
+  initialBalance?: number;
+  isFiltered?: boolean;
 }
 
 export interface ActivityItem {
@@ -30,6 +32,7 @@ export interface ActivityItem {
   usage?: number;
   readingValue?: number;
   cost?: number;
+  runningBalance?: number;
 }
 
 export default function ActivityTable({
@@ -40,6 +43,8 @@ export default function ActivityTable({
   onEdit,
   sortField: externalSortField,
   sortDirection: externalSortDirection,
+  initialBalance = 0,
+  isFiltered = false,
 }: ActivityTableProps) {
   const [internalSortField, setInternalSortField] = useState<SortField>('date');
   const [internalSortDirection, setInternalSortDirection] = useState<SortDirection>('desc');
@@ -86,7 +91,10 @@ export default function ActivityTable({
       });
     }
 
-    // Sort
+    // Sort by date first
+    items.sort((a, b) => a.date.localeCompare(b.date));
+
+    // Now apply secondary sorting if specified
     items.sort((a, b) => {
       let comparison = 0;
       switch (sortField) {
@@ -108,8 +116,30 @@ export default function ActivityTable({
       return sortDirection === 'asc' ? comparison : -comparison;
     });
 
+    // Calculate running balance AFTER sorting - based on chronological order
+    if (isFiltered) {
+      // First, create a chronological copy for balance calculation
+      const chronologicalItems = [...items].sort((a, b) => a.date.localeCompare(b.date));
+      let runningBalance = initialBalance;
+      const balanceMap = new Map<string, number>();
+      
+      for (const item of chronologicalItems) {
+        if (item.type === 'payment') {
+          runningBalance -= item.amount!;
+        } else {
+          runningBalance += item.cost || 0;
+        }
+        balanceMap.set(item.id, runningBalance);
+      }
+      
+      // Apply balances to original items
+      for (const item of items) {
+        item.runningBalance = balanceMap.get(item.id);
+      }
+    }
+
     return items;
-  }, [payments, readings, propertyMap, settings, sortField, sortDirection]);
+  }, [payments, readings, propertyMap, settings, sortField, sortDirection, initialBalance, isFiltered]);
 
   const handleSort = (field: SortField) => {
     // Only allow internal sorting if not externally controlled
@@ -168,6 +198,13 @@ export default function ActivityTable({
               </span>
             </div>
           </div>
+          {isFiltered && activity.runningBalance !== undefined && (
+            <div className="mt-3 pt-3 border-t border-[var(--border)]">
+              <p className="text-sm font-medium">
+                Balance: <span className={activity.runningBalance < 0 ? 'text-green-600' : 'text-red-600'}>{formatCurrency(Math.abs(activity.runningBalance))}</span>
+              </p>
+            </div>
+          )}
           {activity.description && activity.type === 'payment' && activity.description !== 'Payment received' && (
             <p className="text-sm text-[var(--muted)] mt-2">{activity.description}</p>
           )}
@@ -220,6 +257,7 @@ export default function ActivityTable({
             >
               Amount <SortIcon field="amount" />
             </th>
+            {isFiltered && <th className="text-right">Running Balance</th>}
             {onEdit && <th className="w-16"></th>}
           </tr>
         </thead>
@@ -250,6 +288,15 @@ export default function ActivityTable({
                   </div>
                 )}
               </td>
+              {isFiltered && (
+                <td className="text-right font-medium">
+                  {activity.runningBalance !== undefined && (
+                    <span className={activity.runningBalance < 0 ? 'text-green-600' : 'text-red-600'}>
+                      {formatCurrency(Math.abs(activity.runningBalance))}
+                    </span>
+                  )}
+                </td>
+              )}
               {onEdit && (
                 <td className="text-right">
                   <button

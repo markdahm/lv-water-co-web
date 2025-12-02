@@ -22,6 +22,7 @@ interface EditActivityModalProps {
   onClose: () => void;
   activity: ActivityItem | null;
   properties: Property[];
+  readings?: MeterReading[];
   onSavePayment: (payment: Payment) => void;
   onSaveReading: (reading: MeterReading) => void;
   onDeletePayment: (paymentId: string) => void;
@@ -36,6 +37,7 @@ export default function EditActivityModal({
   onClose,
   activity,
   properties,
+  readings = [],
   onSavePayment,
   onSaveReading,
   onDeletePayment,
@@ -48,6 +50,12 @@ export default function EditActivityModal({
   const [readingValue, setReadingValue] = useState('');
   const [notes, setNotes] = useState('');
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+
+  // Find previous reading for the same meter
+  const previousReading = originalReading ? readings
+    .filter(r => r.meterId === originalReading.meterId && r.id !== originalReading.id)
+    .sort((a, b) => b.billingPeriod.localeCompare(a.billingPeriod))[0]
+    : null;
 
   useEffect(() => {
     if (activity) {
@@ -99,6 +107,20 @@ export default function EditActivityModal({
     } else {
       onDeleteReading(activity.originalId);
     }
+    onClose();
+  };
+
+  const handleRevertToPrevious = () => {
+    if (!activity || activity.type !== 'reading' || !previousReading || !originalReading) return;
+
+    const revertedReading: MeterReading = {
+      ...originalReading,
+      readingValue: previousReading.readingValue,
+      readingDate: originalReading.readingDate,
+      rawUsage: 0,
+      usage: 0,
+    };
+    onSaveReading(revertedReading);
     onClose();
   };
 
@@ -213,6 +235,15 @@ export default function EditActivityModal({
 
         {/* Delete section */}
         <div className="pt-4 border-t border-[var(--border)]">
+          {activity.type === 'reading' && previousReading && (
+            <button
+              type="button"
+              onClick={handleRevertToPrevious}
+              className="w-full px-4 py-2 mb-3 text-[var(--primary)] hover:bg-[var(--primary)]/10 rounded-lg transition-colors text-sm font-medium"
+            >
+              Revert to Previous Reading ({previousReading.readingValue.toLocaleString()})
+            </button>
+          )}
           {showDeleteConfirm ? (
             <div className="space-y-3">
               <p className="text-sm text-[var(--muted)] text-center">

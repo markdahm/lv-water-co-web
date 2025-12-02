@@ -325,6 +325,7 @@ export default function Dashboard() {
           onEdit={openEditModal}
           sortField={sortField}
           sortDirection={sortDirection}
+          isFiltered={false}
         />
       </div>
 
@@ -355,6 +356,7 @@ export default function Dashboard() {
         }}
         activity={selectedActivity}
         properties={data.properties}
+        readings={data.readings}
         onSavePayment={handleEditPayment}
         onSaveReading={handleEditReading}
         onDeletePayment={handleDeletePayment}

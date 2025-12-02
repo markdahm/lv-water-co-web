@@ -1,7 +1,7 @@
 {
-  "name": "LV Water Co",
-  "short_name": "LV Water",
-  "description": "Water billing management for LV Water Company",
+  "name": "Linda Vista Water",
+  "short_name": "Linda Vista",
+  "description": "Water billing management for Linda Vista Water",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f5f7fa",

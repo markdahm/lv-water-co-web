@@ -317,6 +317,8 @@ export default function PropertiesPage() {
                   readings={propertyReadings}
                   payments={propertyPayments}
                   settings={data.settings}
+                  initialBalance={selectedProperty.balanceAdjustment}
+                  isFiltered={true}
                 />
               ) : (
                 <p className="text-[var(--muted)]">No activity recorded</p>

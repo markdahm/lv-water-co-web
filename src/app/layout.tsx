@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LV Water Co",
-  description: "Water billing management for LV Water Company",
+  title: "Linda Vista Water",
+  description: "Water billing management for Linda Vista Water",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "LV Water Co",
+    title: "Linda Vista Water",
   },
 };
 

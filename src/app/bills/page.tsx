@@ -156,14 +156,14 @@ export default function InvoicesPage() {
     return `
       <div style="page-break-after: always; padding: 40px;">
         <div style="text-align: center; margin-bottom: 40px;">
-          <h1 style="margin: 0; font-size: 24px;">LV Water Co</h1>
+          <h1 style="margin: 0; font-size: 24px;">Linda Vista Water</h1>
           <p style="color: #666; margin: 5px 0;">Water Service Invoice</p>
         </div>
 
         <div style="display: flex; justify-content: space-between; margin-bottom: 30px;">
           <div>
-            <h3 style="margin: 0 0 5px 0; font-size: 14px; color: #666;">Bill To</h3>
-            <p style="margin: 0; font-weight: 600;">${property?.name || 'Unknown'}</p>
+            <h3 style="margin: 0 0 5px 0; font-size: 14px; color: #666;">Invoice for</h3>
+            <p style="margin: 0; font-weight: 600;">${property?.name || 'Unknown'} Household</p>
             <p style="margin: 0; font-size: 14px; white-space: pre-line;">${property?.address || ''}</p>
           </div>
           <div style="text-align: right;">
@@ -360,14 +360,14 @@ export default function InvoicesPage() {
 
         <div className="card">
           <div className="header text-center mb-8">
-            <h1 className="text-2xl font-bold">LV Water Co</h1>
+            <h1 className="text-2xl font-bold">Linda Vista Water</h1>
             <p className="text-[var(--muted)]">Water Service Invoice</p>
           </div>
 
           <div className="flex flex-col md:flex-row justify-between gap-6 mb-8">
-            <div>
-              <h3 className="text-sm text-[var(--muted)] mb-1">Bill To</h3>
-              <p className="font-semibold">{property?.name}</p>
+          <div>
+              <h3 className="text-sm text-[var(--muted)] mb-1">Invoice for</h3>
+              <p className="font-semibold">{property?.name} Household</p>
               <p className="text-sm whitespace-pre-line">{property?.address}</p>
             </div>
             <div className="text-right">
