@@ -13,7 +13,7 @@
       "id": "5ad93f5e-a023-4e92-9820-785a2c40da61",
       "name": "Dahm",
       "address": "",
-      "balanceAdjustment": 60.65,
+      "balanceAdjustment": 209.46,
       "meters": [
         {
           "id": "8552b911-570c-4611-8545-0e14a487c052",
@@ -26,7 +26,7 @@
       "id": "50b07373-176c-4f75-892d-0afa324eb86d",
       "name": "Vandeneynde",
       "address": "",
-      "balanceAdjustment": 0.02,
+      "balanceAdjustment": 92.79,
       "meters": [
         {
           "id": "af7edc87-e574-4f1c-8f0e-9d3c6b9b1075",
@@ -44,7 +44,7 @@
       "id": "0141936c-08ac-42b4-b23c-165ccde9ac79",
       "name": "Patin",
       "address": "",
-      "balanceAdjustment": -915.04,
+      "balanceAdjustment": -836.77,
       "meters": [
         {
           "id": "76ce00d4-2914-4f20-bdbd-e47b34b0ac47",
@@ -57,7 +57,7 @@
       "id": "92c9ec31-1342-4c7b-a2c2-7c8ff48f7b85",
       "name": "Alosi",
       "address": "",
-      "balanceAdjustment": 15.07,
+      "balanceAdjustment": 74.85,
       "meters": [
         {
           "id": "eb7a4c27-3f7a-4016-b641-f35ea0682738",
