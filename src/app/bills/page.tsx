@@ -7,6 +7,7 @@ import {
   calculateBill,
   getUsageForPeriod,
   calculatePropertyBalance,
+  calculatePaymentsOnPreviousBalance,
   formatBillingPeriod,
   formatCurrency,
   getCurrentBillingPeriod,
@@ -68,6 +69,13 @@ export default function InvoicesPage() {
         data.settings
       );
 
+      const paymentsOnPreviousBalance = calculatePaymentsOnPreviousBalance(
+        property.id,
+        period,
+        previousBalance,
+        data.payments
+      );
+
       const invoice: Invoice = {
         id: `inv-${property.id}-${period}`,
         propertyId: property.id,
@@ -83,6 +91,7 @@ export default function InvoicesPage() {
         fixedCharge: bill.fixedCharge,
         totalAmount: bill.totalAmount,
         previousBalance: -previousBalance,
+        paymentsOnPreviousBalance,
         amountDue: bill.totalAmount - previousBalance,
       };
 
@@ -195,7 +204,20 @@ export default function InvoicesPage() {
               <td style="padding: 12px; text-align: right;">${formatCurrency(-invoice.previousBalance)}</td>
             </tr>
             <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px;">Monthly Service Fee</td>
+              <td style="padding: 12px;">Payments on previous balance</td>
+              <td style="padding: 12px; text-align: right;"></td>
+              <td style="padding: 12px; text-align: right;">${formatCurrency(invoice.paymentsOnPreviousBalance)}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd; font-weight: 600;">
+              <td style="padding: 12px;">Net unpaid balance</td>
+              <td style="padding: 12px; text-align: right;"></td>
+              <td style="padding: 12px; text-align: right;">${formatCurrency(-invoice.previousBalance - invoice.paymentsOnPreviousBalance)}</td>
+            </tr>
+            <tr>
+              <td style="padding: 24px;" colspan="3"></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+              <td style="padding: 12px;">${formatBillingPeriod(invoice.billingPeriod).split(' ')[0]} Service Fee</td>
               <td style="padding: 12px; text-align: right;">1</td>
               <td style="padding: 12px; text-align: right;">${formatCurrency(invoice.fixedCharge)}</td>
             </tr>
@@ -404,7 +426,20 @@ export default function InvoicesPage() {
                 <td className="py-3 text-right">{formatCurrency(-selectedInvoice.previousBalance)}</td>
               </tr>
               <tr className="border-b">
-                <td className="py-3">Monthly Service Fee</td>
+                <td className="py-3">Payments on previous balance</td>
+                <td className="py-3 text-right"></td>
+                <td className="py-3 text-right">{formatCurrency(selectedInvoice.paymentsOnPreviousBalance)}</td>
+              </tr>
+              <tr className="border-b font-semibold">
+                <td className="py-3">Net unpaid balance</td>
+                <td className="py-3 text-right"></td>
+                <td className="py-3 text-right">{formatCurrency(-selectedInvoice.previousBalance - selectedInvoice.paymentsOnPreviousBalance)}</td>
+              </tr>
+              <tr>
+                <td className="py-6" colSpan={3}></td>
+              </tr>
+              <tr className="border-b">
+                <td className="py-3">{formatBillingPeriod(selectedInvoice.billingPeriod).split(' ')[0]} Service Fee</td>
                 <td className="py-3 text-right">1</td>
                 <td className="py-3 text-right">{formatCurrency(selectedInvoice.fixedCharge)}</td>
               </tr>

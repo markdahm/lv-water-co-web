@@ -75,6 +75,36 @@ export function calculatePropertyBalance(
   return balance;
 }
 
+export function calculatePaymentsOnPreviousBalance(
+  propertyId: string,
+  currentPeriod: string,
+  previousBalance: number,
+  allPayments: Payment[]
+): number {
+  // If there was no balance owed (or customer had credit), return 0
+  if (previousBalance <= 0) {
+    return 0;
+  }
+
+  // Calculate the next billing period to define the end of the date range
+  const [year, month] = currentPeriod.split('-').map(Number);
+  const nextDate = new Date(year, month, 1); // month is already 0-indexed after we subtract 1, so adding 1 gives us next month
+  const nextPeriod = `${nextDate.getFullYear()}-${String(nextDate.getMonth() + 1).padStart(2, '0')}`;
+
+  // Get payments made during the current period (from currentPeriod start to nextPeriod start)
+  const periodPayments = allPayments.filter(
+    p => p.propertyId === propertyId &&
+         p.receivedDate >= currentPeriod &&
+         p.receivedDate < nextPeriod
+  );
+
+  // Sum total payments in the period
+  const totalPayments = periodPayments.reduce((sum, p) => sum + p.amount, 0);
+
+  // Cap at the previous balance amount
+  return Math.min(totalPayments, previousBalance);
+}
+
 export function getUsageForPeriod(
   propertyId: string,
   billingPeriod: string,
@@ -158,6 +188,13 @@ export function generateInvoice(
   const usage = getUsageForPeriod(property.id, billingPeriod, readings);
   const bill = calculateBill(Math.max(0, usage), settings);
 
+  const paymentsOnPreviousBalance = calculatePaymentsOnPreviousBalance(
+    property.id,
+    billingPeriod,
+    previousBalance,
+    payments
+  );
+
   const now = new Date();
   const generatedDate = now.toISOString().split('T')[0];
 
@@ -176,6 +213,7 @@ export function generateInvoice(
     fixedCharge: bill.fixedCharge,
     totalAmount: bill.totalAmount,
     previousBalance,
+    paymentsOnPreviousBalance,
     amountDue: bill.totalAmount - previousBalance,
   };
 }

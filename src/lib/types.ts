@@ -48,6 +48,7 @@ export interface Invoice {
   fixedCharge: number;
   totalAmount: number;
   previousBalance: number;
+  paymentsOnPreviousBalance: number;
   amountDue: number;
 }
 

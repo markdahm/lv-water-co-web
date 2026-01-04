@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { AppData, BillingSettings } from '@/lib/types';
 import { loadData, saveData } from '@/lib/data';
 import { formatCurrency, calculatePropertyBalance } from '@/lib/billing';
@@ -13,6 +13,16 @@ export default function SettingsPage() {
   const [editing, setEditing] = useState(false);
   const [settings, setSettings] = useState<BillingSettings | null>(null);
   const [saving, setSaving] = useState(false);
+  const [importError, setImportError] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [isSafari, setIsSafari] = useState(false);
+
+  useEffect(() => {
+    // Detect Safari browser
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isSafariBrowser = userAgent.includes('safari') && !userAgent.includes('chrome');
+    setIsSafari(isSafariBrowser);
+  }, []);
 
   useEffect(() => {
     loadData()
@@ -144,6 +154,87 @@ export default function SettingsPage() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  };
+
+  const handleExportJSON = () => {
+    if (!data) return;
+
+    // Create JSON string with proper formatting
+    const jsonString = JSON.stringify(data, null, 2);
+
+    // Create blob and download
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `water-billing-data-${new Date().toISOString().split('T')[0]}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  const validateAppData = (data: any): data is AppData => {
+    return (
+      data &&
+      Array.isArray(data.properties) &&
+      Array.isArray(data.readings) &&
+      Array.isArray(data.payments) &&
+      Array.isArray(data.invoices) &&
+      Array.isArray(data.neighbors) &&
+      data.settings &&
+      typeof data.settings === 'object'
+    );
+  };
+
+  const handleFileSelect = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) {
+      return;
+    }
+
+    // Show warning and confirm import
+    const confirmed = window.confirm(
+      `WARNING: Be sure you archived the current JSON before proceeding.\n\n` +
+      `You selected: ${file.name}\n\n` +
+      `This will replace ALL current data. Click OK to continue or Cancel to abort.`
+    );
+
+    if (!confirmed) {
+      // Reset file input
+      if (fileInputRef.current) {
+        fileInputRef.current.value = '';
+      }
+      return;
+    }
+
+    setImportError(null);
+
+    try {
+      // Read file
+      const text = await file.text();
+
+      // Parse JSON
+      const importedData = JSON.parse(text);
+
+      // Validate structure
+      if (!validateAppData(importedData)) {
+        throw new Error('Invalid data format. Please ensure the file contains valid AppData structure.');
+      }
+
+      // Save data
+      await saveData(importedData);
+
+      // Reload page to refresh UI
+      window.location.reload();
+    } catch (error) {
+      setImportError(error instanceof Error ? error.message : 'Failed to import data');
+    }
+
+    // Reset file input
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
   };
 
   if (loading) {
@@ -354,9 +445,22 @@ export default function SettingsPage() {
       <div className="card">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-semibold">Data Summary</h2>
-          <button onClick={handleExportData} className="btn-primary text-sm">
-            Export Data
-          </button>
+          <div className="flex gap-2">
+            {isSafari && (
+              <label
+                htmlFor="json-import-file-input"
+                className="btn-secondary text-sm cursor-pointer"
+              >
+                Import JSON
+              </label>
+            )}
+            <button onClick={handleExportJSON} className="btn-secondary text-sm">
+              Export JSON
+            </button>
+            <button onClick={handleExportData} className="btn-primary text-sm">
+              Export Data
+            </button>
+          </div>
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div className="p-3 bg-[var(--border)] rounded-lg">
@@ -377,6 +481,26 @@ export default function SettingsPage() {
           </div>
         </div>
       </div>
+
+      {/* Hidden file input - only for Safari */}
+      {isSafari && (
+        <input
+          id="json-import-file-input"
+          ref={fileInputRef}
+          type="file"
+          accept=".json,application/json"
+          onChange={handleFileSelect}
+          className="sr-only"
+        />
+      )}
+
+      {/* Error message */}
+      {importError && (
+        <div className="fixed bottom-4 right-4 bg-red-500 text-white px-4 py-3 rounded-lg shadow-lg z-50">
+          <p className="font-semibold">Import Error</p>
+          <p className="text-sm">{importError}</p>
+        </div>
+      )}
     </div>
   );
 }
