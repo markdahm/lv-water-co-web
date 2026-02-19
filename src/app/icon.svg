@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Water drop shape -->
+  <path d="M50 8 C50 8, 12 48, 12 67 C12 87 29 96 50 96 C71 96 88 87 88 67 C88 48 50 8 50 8 Z" fill="#3366AA"/>
+  <!-- Highlight -->
+  <ellipse cx="37" cy="52" rx="7" ry="12" fill="rgba(255,255,255,0.25)" transform="rotate(-20 37 52)"/>
+</svg>
